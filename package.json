@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icesun963/OpRouter.git"
+  },
   "keywords": [
     "OpLog"
   ],
   "author": "ut",
-  "license": "BSD"
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "10afab02addb34ba7c900256143275c8824265a2"
 }
