@@ -1,0 +1,15 @@
+{
+  "name": "OpRouter",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "OpLog"
+  ],
+  "author": "ut",
+  "license": "BSD"
+}
