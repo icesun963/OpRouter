@@ -3,7 +3,7 @@ require('./ShareLib.js');
 
 var net = require('net');
 
-var HOST = '42.121.144.150';
+var HOST = '127.0.0.1';
 var PORT = 8066;
 
 

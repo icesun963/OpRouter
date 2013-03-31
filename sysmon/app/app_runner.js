@@ -24,6 +24,7 @@
   $(function(){
     var load =      new Fetcher($('#load .data'), '/load',      1000 * 5);
     var uptime =    new Fetcher($('#uptime'),     '/uptime',    1000 * 60 * 30);
+    var upuser =      new Fetcher($('#upuser'), '/upuser',      1000 * 5);
     var processes = new Fetcher($('.proc_list'),  '/processes', 750);
     processes.render = function(num, el){
       var list = $("<tr>", {class:"proc_list"});
@@ -43,6 +44,10 @@
         .append($("<span>", {html: "/"}))
         .append($("<span>", {class:"total_proc", html: data.proc_num.total}));
     }
+    upuser.update = function(data){
+        $('#upuser').html("Actice User :" + data.NowUser );
+    }
+
     uptime.update = function(data){
       $('#uptime').html("Up for " + data.days + " days, " + data.hours + ":" + data.mins + "." + data.secs);
       if(!uptime.raw_sec){
@@ -50,6 +55,7 @@
         uptime.raw_sec = data.tsec;
       }
     }
+
     uptime.display = function(){
       var t = {}, u = {};
       t.tsec = uptime.raw_sec++;

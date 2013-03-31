@@ -108,9 +108,10 @@ exports.start_server = function(port){
         var requrl = url.parse(req.url, true);
         console.log('requrl:' + req.url);
         switch(requrl.pathname){
-            case '/':
-              render_file("app/main.html", res);
+            /*case '/':
+              render_file("./app/main.html", res);
             break;
+            */
             case '/load':
               load(function(data){
                 render_json(data, res);
@@ -127,10 +128,12 @@ exports.start_server = function(port){
                    render_json(data, res);
                }, num);
             break;
-            case '/appUser' :
+            case '/upuser' :
                 render_json({ 'NowUser' : GetNowUser() },res);
             default:
-                var page = path.join(__dirname, 'app',path.normalize(requrl.pathname));
+                if(requrl.pathname=='/')
+                    requrl.pathname='/main.html';
+                var page = path.join(__dirname, './app',path.normalize(requrl.pathname));
                 path.exists(page, function(val){
                     val ? render_file(page, res) : render_file(path.join(__dirname, 'app', '404.html'), res, 404);
                 });
