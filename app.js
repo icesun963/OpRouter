@@ -215,13 +215,15 @@ net.createServer(function(sock) {
                             {
                                 sychannel = new Channel(opid,true);
                                 SyncChannels.put(opid,sychannel);
-                                client.syncd = true;
+                                //client.syncd = true;
                             }
                         }
 
                         channel.add(client);
+
                         client.channel = channel;
-                        client.syncchannel=sychannel;
+                        client.syncchannel = sychannel;
+
                         if(sychannel && sychannel.syncAll)
                         {
                             sychannel.add(client);

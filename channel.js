@@ -17,12 +17,13 @@ Channel = function (opId,syncAll)
     this.opid       = opId;
     this.syncAll       = syncAll;
     this.lastAlive  =   new Date();//最后更新时间
+
     var self = this;
 
     //加入客户端列表
     this.add = function( tclient ) {
         this.list.push( tclient );
-        log(self.headlog() + 'channel sock add' );
+        log(self.headlog() + 'channel[] sock add' );
         //最大在线人数
         if( this.list.length > this.maxcount ) {
             this.maxcount = this.list.length;
@@ -75,7 +76,7 @@ Channel = function (opId,syncAll)
             return null;
     }
 
-
+    //广播消息
     this.broadcast = function( msg ) {
         var ccount = 0;
         for( var i = 0; i < this.list.length; i++ ) {
@@ -120,6 +121,7 @@ Channel = function (opId,syncAll)
     //客户端连接相关
     this.sock = new net.Socket();
 
+    //发送消息
     this.send=function(msg){
         var outbuff= new ByteRequest();
         outbuff.writeData(msg);
