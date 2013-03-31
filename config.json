@@ -4,9 +4,9 @@
 
 
     "ClientHost": "10.241.35.5",
-    "ClientPort": 8077,
+    "ClientPort": 8066,
     "SyncHost" : "10.241.35.5",
-    "SyncPort" : 8077,
+    "SyncPort" : 8066,
 
     "AliveSecond": 30 ,
     "DataDumpOn" : false,
