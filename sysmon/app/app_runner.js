@@ -47,8 +47,8 @@
     upuser.update = function(data){
         $('#upuser')
             .html($("<span>", { html : "Actice User :" + data.NowUser }))
-            .append($("<span>", { html : " Channel :" + data.ChannelCount }))
-            .append($("<span>", { html : " Sync Channel :" + data.SyncChannelCount }))
+            .append($("<span>", { html : " Channel Count:" + data.ChannelCount }))
+            .append($("<span>", { html : " Sync Channel Count:" + data.SyncChannelCount }))
         ;
     }
 
