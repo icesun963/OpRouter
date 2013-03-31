@@ -195,37 +195,41 @@ net.createServer(function(sock) {
 
                         if(!Channels.containsKey(opid))
                         {
-                            channel = new Channel(opid,false);
-                            sychannel = new Channel(opid,true);
+                            sychannel = channel = new Channel(opid,false);
+
                             if(config.LogOn)
                                 log('Creat Channel:' + opid);
 
                             Channels.put(opid,channel);
-                            SyncChannels.put(opid,sychannel);
                             //初始连接用户,会收到Sync命令
                             client.syncd=true;
                         }
                         else
                         {
                             channel = Channels.get(opid);
-                            sychannel = SyncChannels.get(opid);
+
+                            if(SyncChannels.containsKey(opid))
+                                sychannel = SyncChannels.get(opid);
+
                             if(!sychannel)
                             {
                                 sychannel = new Channel(opid,true);
                                 SyncChannels.put(opid,sychannel);
+                                client.syncd = true;
                             }
                         }
 
                         channel.add(client);
                         client.channel = channel;
-
-                        if(sychannel)
+                        client.syncchannel=sychannel;
+                        if(sychannel && sychannel.syncAll)
                         {
                             sychannel.add(client);
-                            client.syncchannel = sychannel;
-
-                            //发送同步请求
-                            client.syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
+                            if(!client.syncd)
+                            {
+                                //发送同步请求
+                                client.syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
+                            }
                         }
 
                     }

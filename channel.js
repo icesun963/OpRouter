@@ -15,7 +15,7 @@ Channel = function (opId,syncAll)
     this.list       = [];   //存放所有客户端TClient个体对象
     this.maxcount   = 0;    //历史最大客户端数量
     this.opid       = opId;
-    this.sync       = syncAll;
+    this.syncAll       = syncAll;
     this.lastAlive  =   new Date();//最后更新时间
     var self = this;
 
@@ -30,7 +30,19 @@ Channel = function (opId,syncAll)
         log(self.headlog() + 'channel['+ opId +'] sock count:' + this.list.length
             + ', maxcount:' + this.maxcount  );
 
-
+        if(this.syncAll)
+        {
+            for( var i = 0; i < this.list.length; i++ ) {
+                var cuser = this.list[i];
+                //客户端对象
+                if( ! cuser ) continue;
+                //如果同步频道,仅广播未同步的
+                if(cuser.syncd)
+                {
+                    this.remove(cuser);
+                }
+            }
+        }
     }
 
     //查找是否已经加入
@@ -71,7 +83,7 @@ Channel = function (opId,syncAll)
             //客户端对象
             if( ! cuser ) continue;
             //如果同步频道,仅广播未同步的
-            if(this.sync && cuser.syncd)
+            if(this.syncAll && cuser.syncd)
             {
                 continue;
             }
@@ -80,7 +92,7 @@ Channel = function (opId,syncAll)
             try
             {
                 cuser.sock.write( msg );
-                cuser.sync = true;
+                cuser.syncd = true;
             }
             catch ( err )
             {
@@ -112,12 +124,14 @@ Channel = function (opId,syncAll)
         var outbuff= new ByteRequest();
         outbuff.writeData(msg);
         this.sock.write(outbuff.buffer);
+        //更新存活时间
+        self.lastAlive  =   new Date();
     };
 
     this.headlog = function(){
-        if(this.sync)
+        if(this.syncAll)
         {
-            return 'sync ';
+            return 'syncAll ';
         }
         return '';
     };
@@ -128,7 +142,7 @@ Channel = function (opId,syncAll)
 
         // 建立连接后立即向服务器发送数据，服务器将收到这些数据
 
-        if(self.sync!=true)
+        if(self.syncAll!=true)
         {
             //使用同步频道 或者切换频道
             var data= { cmd : "Sync" , args : [opId] };
