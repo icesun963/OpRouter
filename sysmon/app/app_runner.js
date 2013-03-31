@@ -48,7 +48,7 @@
         $('#upuser')
             .html($("<span>", { html : "Actice User :" + data.NowUser }))
             .append($("<span>", { html : " Channel :" + data.ChannelCount }))
-            .append($("<span>", { html : " SyncChannel :" + data.SyncChannelCount }))
+            .append($("<span>", { html : " Sync Channel :" + data.SyncChannelCount }))
         ;
     }
 
