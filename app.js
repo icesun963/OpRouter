@@ -36,15 +36,17 @@ setInterval(function(){
                 channel.close();
                 if(syncchannel)
                     syncchannel.close();
+
                 Channels.remove(key);
                 SyncChannels.remove(key);
+
                 log('Remove Channel:' + key);
                 remove = true;
             }
         }
     }
     if(remove)
-        log('App Channel Count:' + Channels.size());
+        log('App Channel Count:' + keys.length + '->'+ Channels.size() );
 },3000);
 
 //如果没有任何连接,重启服务
