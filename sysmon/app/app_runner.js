@@ -45,7 +45,11 @@
         .append($("<span>", {class:"total_proc", html: data.proc_num.total}));
     }
     upuser.update = function(data){
-        $('#upuser').html("Actice User :" + data.NowUser );
+        $('#upuser')
+            .html($("<span>", { html : "Actice User :" + data.NowUser }))
+            .append($("<span>", { html : " Channel Count :" + data.ChannelCount }))
+            .append($("<span>", { html : " Sync Channel Count :" + data.SyncChannelCount }))
+        ;
     }
 
     uptime.update = function(data){

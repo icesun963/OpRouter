@@ -150,7 +150,7 @@ exports.start_server = function(port){
                }, num);
             break;
             case '/upuser' :
-                render_json({ 'NowUser' : GetNowUser() },res);
+                render_json( GetNowUser() ,res);
             default:
                 if(requrl.pathname=='/')
                     requrl.pathname='/main.html';

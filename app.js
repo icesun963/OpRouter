@@ -89,7 +89,11 @@ setInterval(function(){
 var Router = new RouterChannel();
 
 GetNowUser = function(){
-    return Router.count()
+    return {
+        'NowUser' : Router.count() ,
+        'ChannelCount' : Channels.size(),
+        'SyncChannelCount' : SyncChannels.size()
+    };
 };
 
 //全同步参数
