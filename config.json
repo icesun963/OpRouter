@@ -1,13 +1,16 @@
 {
     "version": "v0.0.1",
     "ServerPort" : 8066,
-    "ClientHost": "42.120.19.42",
+
+
+    "ClientHost": "10.241.35.5",
     "ClientPort": 8077,
-    "SyncHost" : "42.120.19.42",
+    "SyncHost" : "10.241.35.5",
     "SyncPort" : 8077,
+
     "AliveSecond": 10 ,
     "DataDumpOn" : false,
-    "LogOn" : true,
+    "LogOn" : false,
     "AutoExitOnNoClient" : true ,
     "MaxErrorCount" : 10
 }

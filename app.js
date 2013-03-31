@@ -68,6 +68,9 @@ setInterval(function(){
         }
     }
 
+    //log(SyncChannels.toString());
+    //log(Channels.toString());
+
     if(remove)
         log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
 },3000);
@@ -204,8 +207,13 @@ net.createServer(function(sock) {
                         }
                         else
                         {
-                            channel=Channels.get(opid);
+                            channel = Channels.get(opid);
                             sychannel = SyncChannels.get(opid);
+                            if(!sychannel)
+                            {
+                                sychannel = new Channel(opid,true);
+                                SyncChannels.put(opid,sychannel);
+                            }
                         }
 
                         channel.add(client);

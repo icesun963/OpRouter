@@ -128,10 +128,12 @@ ByteRequest = function()
             var inStream = new InStream(this.buffer);
             var lenght=inStream.readVarint32();
             var datatype=inStream.readVarint32();
-            if(config.LogOn)
-                log('>>Read Lenght:' + lenght + ' Buff Lenght:'+ this.buffer.length);
 
             var mylenght=inStream.offset();
+
+            if(config.LogOn)
+                log('>>Read Lenght:' + lenght + ' Buff Lenght:'+ this.buffer.length + ' Read:' + mylenght);
+
             if(this.buffer.length>=lenght + mylenght)
             {
                var data= this.buffer.slice(mylenght, lenght + mylenght);
@@ -146,6 +148,10 @@ ByteRequest = function()
                 }
                }
                this.buffer= this.buffer.slice(lenght+ inStream.offset() );
+            }
+            else
+            {
+                break;
             }
 
 
@@ -174,7 +180,7 @@ ByteRequest = function()
     };
 }
 
-//哈希表
+//表
 Hashtable =function (){
     this.clear = hashtable_clear;
     this.containsKey = hashtable_containsKey;
@@ -189,6 +195,8 @@ Hashtable =function (){
     this.values = hashtable_values;
     this.hashtable = new Array();
 
+    var classkey="__class__";
+
     function hashtable_clear(){
         this.hashtable = new Array();
     }
@@ -196,7 +204,7 @@ Hashtable =function (){
     function hashtable_containsKey(key){
         var exists = false;
         for (var i in this.hashtable) {
-            if (i == key && this.hashtable[i] != null) {
+            if (i == key && this.hashtable[i] != null ) {
                 exists = true;
                 break;
             }
@@ -228,7 +236,7 @@ Hashtable =function (){
     function hashtable_keys(){
         var keys = new Array();
         for (var i in this.hashtable) {
-            if (this.hashtable[i] != null)
+            if (this.hashtable[i] != null && i!=classkey)
                 keys.push(i);
         }
         return keys;
@@ -252,7 +260,7 @@ Hashtable =function (){
     function hashtable_size(){
         var size = 0;
         for (var i in this.hashtable) {
-            if (this.hashtable[i] != null)
+            if (this.hashtable[i] != null && i !=classkey )
                 size ++;
         }
         return size;
@@ -262,7 +270,9 @@ Hashtable =function (){
         var result = '';
         for (var i in this.hashtable)
         {
-            if (this.hashtable[i] != null)
+            if (this.hashtable[i] != null
+                //&& i !=classkey
+                )
                 result += '{' + i + '},{' + this.hashtable[i] + '}/n';
         }
         return result;
