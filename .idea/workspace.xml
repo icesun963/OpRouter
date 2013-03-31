@@ -4,14 +4,14 @@
     <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="" />
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364727079957" ignored="false" />
+    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364727429736" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363934721650" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364716904953" ignored="false" />
     <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363936763480" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364716876420" ignored="false" />
     <file path="/config.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363447011502" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364727039378" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364727440416" ignored="false" />
     <file path="/routerChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364648485210" ignored="false" />
     <file path="/policyServer.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363515194617" ignored="false" />
     <file path="/protobuf.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363516483339" ignored="false" />
@@ -40,12 +40,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="28" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
+            <state line="48" column="67" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.71246004">
               <folding>
-                <element signature="e#3368#6029#0" expanded="false" />
+                <element signature="e#3396#6057#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fun.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fun.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="244" column="13" selection-start="6277" selection-end="6277" vertical-scroll-proportion="0.33226836">
+            <state line="244" column="13" selection-start="6277" selection-end="6277" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#512#869#0" expanded="false" />
                 <element signature="e#1066#2407#0" expanded="false" />
@@ -457,22 +457,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="28" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#3368#6029#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fun.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="13" selection-start="6277" selection-end="6277" vertical-scroll-proportion="0.33226836">
+        <state line="244" column="13" selection-start="6277" selection-end="6277" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#512#869#0" expanded="false" />
             <element signature="e#1066#2407#0" expanded="false" />
             <element signature="e#2443#4498#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="67" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.71246004">
+          <folding>
+            <element signature="e#3396#6057#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -46,7 +46,7 @@ setInterval(function(){
         }
     }
     if(remove)
-        log('App Channel Count:' + keys.length + '->'+ Channels.size() );
+        log('App Channel Count:' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
 },3000);
 
 //如果没有任何连接,重启服务
