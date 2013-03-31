@@ -26,25 +26,48 @@ setInterval(function(){
         var key=       keys[i];
 
         var channel = Channels.get(key);
-        var syncchannel = SyncChannels.get(key);
+
         if(channel && channel.lastAlive)
         {
             var sc= (new Date().getTime()- channel.lastAlive.getTime())/1000;
 
             if(sc>config.AliveSecond)
             {
+
                 channel.close();
-                if(syncchannel)
-                    syncchannel.close();
 
                 Channels.remove(key);
-                SyncChannels.remove(key);
 
                 log('Remove Channel:' + key);
                 remove = true;
             }
         }
     }
+
+    keys=SyncChannels.keys();
+
+    for(var i=0 ;i<keys.length; i++)
+    {
+        var key=       keys[i];
+
+        var channel = SyncChannels.get(key);
+
+        if(channel && channel.lastAlive)
+        {
+            var sc= (new Date().getTime()- channel.lastAlive.getTime())/1000;
+
+            if(sc>config.AliveSecond)
+            {
+
+                channel.close();
+                SyncChannels.remove(key);
+
+                log('Remove Sync Channel:' + key);
+                remove = true;
+            }
+        }
+    }
+
     if(remove)
         log('App Channel Count:' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
 },3000);
