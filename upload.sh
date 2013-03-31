@@ -1,3 +1,3 @@
 git add .
 git commit -a -m 'change'
-push origin master
+git push origin master
