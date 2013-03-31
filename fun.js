@@ -93,9 +93,6 @@ Client = function(sock)
 };
 
 
-
-
-
 //请求命令
 ByteRequest = function()
 {
@@ -177,7 +174,7 @@ ByteRequest = function()
     };
 }
 
-
+//哈希表
 Hashtable =function (){
     this.clear = hashtable_clear;
     this.containsKey = hashtable_containsKey;

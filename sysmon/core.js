@@ -8,50 +8,71 @@ var sys = require('sys'),
 var routerApp=require('../app.js');
 
 var uptime = function(callback){
-    //fs.readFile('/proc/uptime', "r",  function(err, data){ // Broken, currently.
-    var ps = exec('cat /proc/uptime', function(err, data, stderr){    
-        var upsec = parseInt(data.split(/ /)[0]);
-        var t = {}, u = {};
-        t.tsec = upsec;
-        t.secs = (u.secs = upsec) % 60;
-        t.mins = (u.mins = (u.secs / 60)) % 60;
-        t.hours = (u.hours = (u.mins / 60)) % 24;
-        t.days = (u.hours / 24);
-        for (el in t){ t[el] = Math.floor(t[el]); }
-        callback(t);
-    });
+    try
+    {
+        //fs.readFile('/proc/uptime', "r",  function(err, data){ // Broken, currently.
+        var ps = exec('cat /proc/uptime', function(err, data, stderr){
+            var upsec = parseInt(data.split(/ /)[0]);
+            var t = {}, u = {};
+            t.tsec = upsec;
+            t.secs = (u.secs = upsec) % 60;
+            t.mins = (u.mins = (u.secs / 60)) % 60;
+            t.hours = (u.hours = (u.mins / 60)) % 24;
+            t.days = (u.hours / 24);
+            for (el in t){ t[el] = Math.floor(t[el]); }
+            callback(t);
+        });
+    }
+    catch(err)
+    {
+
+    }
+
 }, load = function(callback){
-    //fs.readFile('/proc/loadavg', "r", function(err, data){ // Broken, currently.
-    var ps = exec('cat /proc/loadavg', function(err, data, stderr){    
-        if (err) return false;
-        data = (data + '').split(' ');
-        var proc = data.slice(0, 3);
-        var ad = data[4].split('/');
-        var amt = {
-            running: ad[0],
-            total: ad[1]
-        };
-        callback({"avg": proc, "proc_num": amt});
-    });
+    try
+    {
+        //fs.readFile('/proc/loadavg', "r", function(err, data){ // Broken, currently.
+        var ps = exec('cat /proc/loadavg', function(err, data, stderr){
+            if (err) return false;
+            data = (data + '').split(' ');
+            var proc = data.slice(0, 3);
+            var ad = data[4].split('/');
+            var amt = {
+                running: ad[0],
+                total: ad[1]
+            };
+            callback({"avg": proc, "proc_num": amt});
+        });
+    }
+    catch(err)
+    {
+
+    }
 }, top_processes = function(callback, max_lines){
     if (!max_lines){ max_lines = 10; }
-    var ps = exec('ps -e --sort=%cpu -o %cpu,%mem,pid,user,fname  | tail --lines '+max_lines,
-        function(err, stdout, stderr){
-            var ps_raw = (' ' + stdout).split("\n").slice(1, max_lines).reverse();
-            var processes = [];
-            for (var i = 0; i < ps_raw.length; i++){
-                var proc = ps_raw[i].split(/ +/);
-                if (proc[0] == ''){ proc.shift(); }
-                processes.push({
-                    pnm: proc[4],
-                    cpu: proc[0],
-                    mem: proc[1],
-                    pid: proc[2],
-                    usr: proc[3]
-                });
-            }
-            callback(processes);
-        });
+    try{
+        var ps = exec('ps -e --sort=%cpu -o %cpu,%mem,pid,user,fname  | tail --lines '+max_lines,
+            function(err, stdout, stderr){
+                var ps_raw = (' ' + stdout).split("\n").slice(1, max_lines).reverse();
+                var processes = [];
+                for (var i = 0; i < ps_raw.length; i++){
+                    var proc = ps_raw[i].split(/ +/);
+                    if (proc[0] == ''){ proc.shift(); }
+                    processes.push({
+                        pnm: proc[4],
+                        cpu: proc[0],
+                        mem: proc[1],
+                        pid: proc[2],
+                        usr: proc[3]
+                    });
+                }
+                callback(processes);
+            });
+    }
+    catch(err)
+    {
+
+    }
 }, resp = function(runnable, res, type, resp_code){
     if (!resp_code){ resp_code = 200; }
     if (!type){ type = 'text/html'; }
