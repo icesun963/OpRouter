@@ -72,10 +72,11 @@ RouterChannel = function()
     this.close = function (){
         for(var i= 0;i<this.list.length;i++)
         {
-            var client=this.list[i];
-            if(client)
-                client.close();
+            var subclient=this.list[i];
+            if(subclient)
+                subclient.close();
         }
+        client.close()
     }
 
     //客户端连接相关
@@ -103,7 +104,7 @@ RouterChannel = function()
                 function(){
                     connect();
                     inReconnent--;
-                },3000);
+                },10000);
         }
     };
 

@@ -1,8 +1,12 @@
 var config = require('./config.json');
 require('./fun.js');
 require('./channel.js');
-require('./routerChannel.js')
-require('./policyServer.js')
+require('./routerChannel.js');
+require('./policyServer.js');
+
+require('./sysmon/core.js');
+
+
 var net = require('net');
 
 var PORT = config.ServerPort;
@@ -39,8 +43,22 @@ setInterval(function(){
     }
 },3000);
 
+//如果没有任何连接,重启服务
+setInterval(function(){
+    log("RouterUser:" + Router.count());
+    if(config.AutoExitOnNoClient)
+        if(Router.count()==0)
+        {
+            process.exit();
+        }
+},60*1000);
+
 //主通道
 var Router = new RouterChannel();
+
+GetNowUser = function(){
+    return Router.count()
+};
 
 //全同步参数
 Router.onDataCallBack(function(data){
@@ -202,6 +220,11 @@ net.createServer(function(sock) {
                 catch(err)
                 {
                     log('app error:' + err);
+                    client.error++;
+                    if(client.error >= config.MaxErrorCount)
+                    {
+                        client.close();
+                    }
                 }
          });
 

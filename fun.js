@@ -45,6 +45,7 @@ Client = function(sock)
     this.clientId   = clientIdSeed++;
     this.channel;
     this.syncchannel;
+    this.error = 0;
     var self = this;
 
     this.onClose=function(callback){
