@@ -125,7 +125,7 @@ Channel = function (opId,syncAll)
         outbuff.writeData(msg);
         this.sock.write(outbuff.buffer);
         //更新存活时间
-        self.lastAlive  =   new Date();
+        this.lastAlive  =   new Date();
     };
 
     this.headlog = function(){

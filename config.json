@@ -8,7 +8,7 @@
     "SyncHost" : "10.241.35.5",
     "SyncPort" : 8077,
 
-    "AliveSecond": 10 ,
+    "AliveSecond": 30 ,
     "DataDumpOn" : false,
     "LogOn" : false,
     "AutoExitOnNoClient" : true ,
