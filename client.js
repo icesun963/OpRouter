@@ -16,8 +16,8 @@ client.connect(PORT, HOST, function() {
 
 
     //使用同步频道 或者切换频道
-    var cmd= { cmd :"GetOpIdByToken",rcmd : 1000,args:["test1"] }
-
+    //var cmd= { cmd :"GetOpIdByToken",rcmd : 1000,args:["test1"] }
+    var cmd = { cmd : "Sync"  , args:["10001"]}
     var buff= new ByteRequest();
 
     buff.writeData(cmd);
@@ -32,7 +32,7 @@ client.on('data', function(data) {
 
     log('DATA: ' + data);
     // 完全关闭连接
-
+    return;
     var buff= new ByteRequest();
     buff.append(data);
     buff.readData(function(data){
@@ -54,6 +54,7 @@ client.on('data', function(data) {
                 case 1003:
                     log("Queue Up!");
                     break;
+
 
             }
         }

@@ -7,7 +7,7 @@
     "SyncPort" : 8077,
     "AliveSecond": 10 ,
     "DataDumpOn" : false,
-    "LogOn" : false,
+    "LogOn" : true,
     "AutoExitOnNoClient" : true ,
     "MaxErrorCount" : 10
 }

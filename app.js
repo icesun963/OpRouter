@@ -44,11 +44,11 @@ setInterval(function(){
         }
     }
 
-    keys=SyncChannels.keys();
+   var skeys=SyncChannels.keys();
 
-    for(var i=0 ;i<keys.length; i++)
+    for(var i=0 ;i<skeys.length; i++)
     {
-        var key=       keys[i];
+        var key=       skeys[i];
 
         var channel = SyncChannels.get(key);
 
@@ -69,7 +69,7 @@ setInterval(function(){
     }
 
     if(remove)
-        log('App Channel Count:' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
+        log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
 },3000);
 
 //如果没有任何连接,重启服务
