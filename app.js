@@ -20,6 +20,7 @@ var SyncChannels = new Hashtable();
 //检查存活频道
 setInterval(function(){
     var keys=Channels.keys();
+    var remove=false;
     for(var i=0 ;i<keys.length; i++)
     {
         var key=       keys[i];
@@ -38,9 +39,12 @@ setInterval(function(){
                 Channels.remove(key);
                 SyncChannels.remove(key);
                 log('Remove Channel:' + key);
+                remove = true;
             }
         }
     }
+    if(remove)
+        log('App Channel Count:' + Channels.size());
 },3000);
 
 //如果没有任何连接,重启服务
