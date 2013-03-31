@@ -196,12 +196,12 @@ net.createServer(function(sock) {
                         if(!Channels.containsKey(opid))
                         {
                             channel = new Channel(opid,false);
-                            //sychannel = new Channel(opid,true);
+                            sychannel = new Channel(opid,true);
                             if(config.LogOn)
                                 log('Creat Channel:' + opid);
 
                             Channels.put(opid,channel);
-                            //SyncChannels.put(opid,sychannel);
+                            SyncChannels.put(opid,sychannel);
                             //初始连接用户,会收到Sync命令
                             client.syncd=true;
                         }

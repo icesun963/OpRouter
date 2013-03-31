@@ -23,7 +23,7 @@
     <file path="/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364724893140" ignored="false" />
     <file path="/main.html" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364718495354" ignored="false" />
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364718939562" ignored="false" />
-    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364731294243" ignored="false" />
+    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364731414438" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="223" column="40" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.71428573">
+            <state line="205" column="28" selection-start="4918" selection-end="4918" vertical-scroll-proportion="0.42857143">
               <folding />
             </state>
           </provider>
@@ -266,7 +266,11 @@
       <created>1364731300564</created>
       <updated>1364731300564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="upload">
+      <created>1364731419548</created>
+      <updated>1364731419548</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -478,7 +482,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="223" column="40" selection-start="5608" selection-end="5608" vertical-scroll-proportion="0.71428573">
+        <state line="205" column="28" selection-start="4918" selection-end="4918" vertical-scroll-proportion="0.42857143">
           <folding />
         </state>
       </provider>
