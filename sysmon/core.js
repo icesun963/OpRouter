@@ -5,7 +5,7 @@ var sys = require('sys'),
     path= require('path'),
     exec = require('child_process').exec;
 
-var routerApp=require('../app.js');
+require('../app.js');
 
 var uptime = function(callback){
     try
