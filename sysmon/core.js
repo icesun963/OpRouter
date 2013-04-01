@@ -158,9 +158,9 @@ exports.start_server = function(port){
                         {
                             var nowUser =   getNowUser();
                             render_json( {
-                                "CpuAvg1": 0.5 ,
-                                "CpuAvg2": 0.5 ,
-                                "CpuAvg3": 0.5 ,
+                                "CpuAvg1": 0.50 ,
+                                "CpuAvg2": 0.50 ,
+                                "CpuAvg3": 0.50 ,
                                 "NowUser":nowUser.NowUser,
                                 "ChannelCount" : nowUser.ChannelCount,
                                 "SyncChannelCount":nowUser.SyncChannelCount
@@ -176,9 +176,9 @@ exports.start_server = function(port){
                         };
                         var nowUser =   getNowUser();
                         render_json( {
-                            "CpuAvg1": proc[0] ,
-                            "CpuAvg2": proc[1] ,
-                            "CpuAvg3": proc[2] ,
+                            "CpuAvg1":parseFloat( proc[0] ) ,
+                            "CpuAvg2":parseFloat(  proc[1] ) ,
+                            "CpuAvg3": parseFloat( proc[2] ),
                             "NowUser":nowUser.NowUser,
                             "ChannelCount" : nowUser.ChannelCount,
                             "SyncChannelCount":nowUser.SyncChannelCount
