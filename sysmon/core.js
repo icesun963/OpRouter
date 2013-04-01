@@ -150,7 +150,48 @@ exports.start_server = function(port){
                }, num);
             break;
             case '/upuser' :
-                render_json( GetNowUser() ,res);
+                try
+                {
+                    //fs.readFile('/proc/loadavg', "r", function(err, data){ // Broken, currently.
+                    var ps = exec('cat /proc/loadavg', function(err, data, stderr){
+                        if (err)
+                        {
+                            var nowUser =   getNowUser();
+                            render_json( {
+                                "CpuAvg1": 0.5 ,
+                                "CpuAvg2": 0.5 ,
+                                "CpuAvg3": 0.5 ,
+                                "NowUser":nowUser.NowUser,
+                                "ChannelCount" : nowUser.ChannelCount,
+                                "SyncChannelCount":nowUser.SyncChannelCount
+                            } ,res);
+                            return false;
+                        }
+                        data = (data + '').split(' ');
+                        var proc = data.slice(0, 3);
+                        var ad = data[4].split('/');
+                        var amt = {
+                            running: ad[0],
+                            total: ad[1]
+                        };
+                        var nowUser =   getNowUser();
+                        render_json( {
+                            "CpuAvg1": proc[0] ,
+                            "CpuAvg2": proc[1] ,
+                            "CpuAvg3": proc[2] ,
+                            "NowUser":nowUser.NowUser,
+                            "ChannelCount" : nowUser.ChannelCount,
+                            "SyncChannelCount":nowUser.SyncChannelCount
+                        } ,res);
+                    });
+
+                }
+                catch(err)
+                {
+
+                }
+                break;
+
             default:
                 if(requrl.pathname=='/')
                     requrl.pathname='/main.html';

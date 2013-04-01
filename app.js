@@ -88,7 +88,7 @@ setInterval(function(){
 //主通道
 var Router = new RouterChannel();
 
-GetNowUser = function(){
+getNowUser = function(){
     return {
         'NowUser' : Router.count() ,
         'ChannelCount' : Channels.size(),
