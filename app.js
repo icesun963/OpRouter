@@ -185,6 +185,7 @@ net.createServer(function(sock) {
 
                     if(data.cmd=='Sync')
                     {
+                        client.syncd = false;
                         client.leaveChannel();
 
                         var opid = data.args[0];
@@ -213,13 +214,13 @@ net.createServer(function(sock) {
                             channel = Channels.get(opid);
 
                             if(SyncChannels.containsKey(opid))
+                            {
                                 sychannel = SyncChannels.get(opid);
-
-                            if(!sychannel)
+                            }
+                            else
                             {
                                 sychannel = new Channel(opid,true);
                                 SyncChannels.put(opid,sychannel);
-                                //client.syncd = true;
                             }
                         }
 
