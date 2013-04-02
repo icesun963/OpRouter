@@ -97,6 +97,8 @@ Channel = function (opId,syncAll)
                 {
                     cuser.syncd = true;
                 }
+                if(config.LogOn)
+                    log('broadcast user[' + i + ']:' + cuser.remoteAddress + ':' + cuser.remotePort );
             }
             catch ( err )
             {
@@ -170,9 +172,6 @@ Channel = function (opId,syncAll)
     // data是服务器发回的数据
     this.sock.on('data', function(data) {
 
-        //if(config.LogOn)
-        //    log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length);
-
         //更新存活时间
         self.lastAlive  =   new Date();
 
@@ -187,14 +186,7 @@ Channel = function (opId,syncAll)
                 //广播频道消息
                 self.broadcast(sbuff.buffer);
             });
-        if(config.LogOn){
-            for( var i = 0; i < self.list.length; i++ ) {
-                var cuser = self.list[i];
-                //客户端对象
-                if( ! cuser ) continue;
-                log('user[' + i + ']:' + cuser.remoteAddress + ':' + cuser.remotePort );
-            }
-        }
+
     });
 
     // 为客户端添加“close”事件处理函数
