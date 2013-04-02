@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fun.js" afterPath="$PROJECT_DIR$/fun.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364905414053" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364729636221" ignored="false" />
-    <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364902607123" ignored="false" />
+    <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364905796768" ignored="false" />
     <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904549559" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903863019" ignored="false" />
@@ -23,7 +23,7 @@
     <file path="/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364724893140" ignored="false" />
     <file path="/main.html" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364745909594" ignored="false" />
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364738465830" ignored="false" />
-    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364905284950" ignored="false" />
+    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364905417382" ignored="false" />
     <file path="$PROJECT_DIR$/sysmon/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903034604" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +44,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="31" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.38338658">
+            <state line="157" column="31" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fun.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fun.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fun.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="25" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
+            <state line="141" column="34" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.5511182">
               <folding />
             </state>
           </provider>
@@ -121,11 +121,11 @@
         <option value="$PROJECT_DIR$/sysmon/core.js" />
         <option value="$PROJECT_DIR$/sysmon/app/app_runner.js" />
         <option value="$PROJECT_DIR$/sysmon/app/main.html" />
-        <option value="$PROJECT_DIR$/fun.js" />
         <option value="$PROJECT_DIR$/policyServer.js" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/channel.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/fun.js" />
       </list>
     </option>
   </component>
@@ -354,7 +354,11 @@
       <created>1364905288697</created>
       <updated>1364905288697</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="upload">
+      <created>1364905422025</created>
+      <updated>1364905422025</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -460,10 +464,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/fun.js</url>
+          <line>140</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="150" />
+      <option name="time" value="151" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -536,23 +547,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/policyServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fun.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="25" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="3" selection-start="299" selection-end="299" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="31" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/policyServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -564,9 +575,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/fun.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="31" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.38338658">
+        <state line="141" column="34" selection-start="3658" selection-end="3658" vertical-scroll-proportion="0.5511182">
           <folding />
         </state>
       </provider>

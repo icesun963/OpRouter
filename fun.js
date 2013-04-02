@@ -136,10 +136,10 @@ ByteRequest = function()
 
             if(this.buffer.length>=lenght + mylenght)
             {
-               var data= this.buffer.slice(mylenght, lenght + mylenght);
+                var data= this.buffer.slice(mylenght, lenght + mylenght);
                 if(datatype==2)
                 {
-
+                    log('Gizp..');
                 }
                 else
                 {
