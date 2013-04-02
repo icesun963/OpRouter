@@ -4,7 +4,7 @@
 
     "ClientHost": "10.241.35.5",
     "ClientPort": 8066,
-    "SyncHost" : "10.241.35.5",
+    "SyncHost" :"10.241.35.5",
     "SyncPort" : 8066,
 
     "AliveSecond": 30 ,

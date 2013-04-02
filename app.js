@@ -20,53 +20,30 @@ var SyncChannels = new Hashtable();
 //检查存活频道
 setInterval(function(){
     var keys=Channels.keys();
+    var skeys=SyncChannels.keys();
     var remove=false;
     for(var i=0 ;i<keys.length; i++)
     {
         var key=       keys[i];
-
         var channel = Channels.get(key);
-
         if(channel && channel.lastAlive)
         {
             var sc= (new Date().getTime()- channel.lastAlive.getTime())/1000;
 
             if(sc>config.AliveSecond)
             {
-
                 channel.close();
-
                 Channels.remove(key);
-
+                var syncchannel = SyncChannels.get(key);
+                if(syncchannel)
+                    syncchannel.close();
+                SyncChannels.remove(key);
                 log('Remove Channel:' + key);
                 remove = true;
             }
         }
     }
 
-   var skeys=SyncChannels.keys();
-
-    for(var i=0 ;i<skeys.length; i++)
-    {
-        var key=       skeys[i];
-
-        var channel = SyncChannels.get(key);
-
-        if(channel && channel.lastAlive)
-        {
-            var sc= (new Date().getTime()- channel.lastAlive.getTime())/1000;
-
-            if(sc>config.AliveSecond)
-            {
-
-                channel.close();
-                SyncChannels.remove(key);
-
-                log('Remove Sync Channel:' + key);
-                remove = true;
-            }
-        }
-    }
 
     //log(SyncChannels.toString());
     //log(Channels.toString());
@@ -185,7 +162,7 @@ net.createServer(function(sock) {
 
                     if(data.cmd=='Sync')
                     {
-                        client.syncd = false;
+
                         client.leaveChannel();
 
                         var opid = data.args[0];
@@ -200,12 +177,16 @@ net.createServer(function(sock) {
 
                         if(!Channels.containsKey(opid))
                         {
-                            sychannel = channel = new Channel(opid,false);
+                            channel = new Channel(opid,false);
+
 
                             if(config.LogOn)
                                 log('Creat Channel:' + opid);
 
                             Channels.put(opid,channel);
+
+                            sychannel = new Channel(opid,true);
+                            SyncChannels.put(opid,sychannel);
                             //初始连接用户,会收到Sync命令
                             client.syncd=true;
                         }
@@ -217,8 +198,9 @@ net.createServer(function(sock) {
                             {
                                 sychannel = SyncChannels.get(opid);
                             }
-                            else
+                            if(!sychannel)
                             {
+                                 log("error>>sychannel is null")
                                 sychannel = new Channel(opid,true);
                                 SyncChannels.put(opid,sychannel);
                             }
@@ -229,10 +211,10 @@ net.createServer(function(sock) {
                         client.channel = channel;
                         client.syncchannel = sychannel;
 
-                        if(sychannel && sychannel.syncAll)
+                        if(sychannel)
                         {
                             sychannel.add(client);
-                            if(!client.syncd)
+    //                        if(!client.syncd)
                             {
                                 //发送同步请求
                                 client.syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
