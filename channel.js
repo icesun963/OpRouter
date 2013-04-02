@@ -22,16 +22,17 @@ Channel = function (opId,syncAll)
 
     //加入客户端列表
     this.add = function( tclient ) {
-        this.list.push( tclient );
-        log(self.headlog() + 'channel[] sock add' );
-        //最大在线人数
-        if( this.list.length > this.maxcount ) {
-            this.maxcount = this.list.length;
+        if(find(tclient)==-1)
+        {
+            this.list.push( tclient );
+            log(self.headlog() + 'channel[] sock add' );
+            //最大在线人数
+            if( this.list.length > this.maxcount ) {
+                this.maxcount = this.list.length;
+            }
+            log(self.headlog() + 'channel['+ opId +'] sock count:' + this.list.length
+                + ', maxcount:' + this.maxcount  );
         }
-        log(self.headlog() + 'channel['+ opId +'] sock count:' + this.list.length
-            + ', maxcount:' + this.maxcount  );
-
-        this.sock.pipe(tclient.sock);
 
         if(this.syncAll)
         {

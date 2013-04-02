@@ -2,6 +2,8 @@ var zlib = require("zlib");
 require('./ShareLib.js');
 var config = require('./config.json');
 
+
+
 //===================================================================
 //Buff二进制输出
 //===================================================================
@@ -124,9 +126,10 @@ ByteRequest = function()
             }
 
             if(config.LogOn)
-                log('>>buffer:[' + this.buffer.toByteArray() + ']' + this.buffer);
+                log('>>buffer:[' + this.buffer + ']' + this.buffer.toByteArray());
 
             var inStream = new InStream(this.buffer);
+
             var lenght=inStream.readVarint32();
 
             var datatype=inStream.readVarint32();
@@ -134,18 +137,27 @@ ByteRequest = function()
             var mylenght=inStream.offset();
 
             if(config.LogOn)
-                log('>>Read Lenght:' + lenght + ' Buff Lenght:'+ this.buffer.length + ' Read:' + mylenght);
+                log('Read Lenght:' + lenght +
+                    ' Buff Lenght:'+ this.buffer.length +
+                    ' ReadHead:' + mylenght + ' DataType:' + datatype);
 
+            if(lenght<=0)
+            {
+                this.buffer = new Buffer(0);
+                log('drop>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+            }
             if(this.buffer.length>=lenght + mylenght)
             {
                 var data = this.buffer.slice(mylenght, lenght + mylenght);
-                var srcdata = this.buffer.slice(0, lenght + mylenght);
                 if(datatype == 1)
                 {
+                    if(config.LogOn)
+                        log("zlib...");
+
                     zlib.inflateRaw(data, function(err, buffer) {
                         if (!err) {
                             if(callback){
-                                callback(buffer,srcdata);
+                                callback(buffer);
                             }
                         }
                     });
@@ -156,23 +168,25 @@ ByteRequest = function()
                 }
                 else
                 {
+                    if(config.LogOn)
+                        log("callback:" + data);
+
                     if(callback){
-                        callback(data,srcdata);
+                        callback(data);
                     }
                 }
 
-
-
-                this.buffer= this.buffer.slice(lenght+ inStream.offset() );
+                this.buffer= this.buffer.slice(lenght + inStream.offset());
             }
             else
             {
+                if(config.LogOn)
+                    log('wating....');
                 break;
             }
 
-
-            if(this.buffer.length>0)
-                if(config.LogOn)
+            if(config.LogOn)
+                if(this.buffer.length>0)
                     log('>>left:[' + this.buffer.toByteArray() + ']');
         }
     };
