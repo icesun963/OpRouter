@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings-FJ-PC.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace-FJ-PC.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace-MyBook.xml" afterPath="" />
-    </list>
+    <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="" />
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364902698480" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364729636221" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364902607123" ignored="false" />
-    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364902920130" ignored="false" />
+    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904549559" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903863019" ignored="false" />
     <file path="/config.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363447011502" ignored="false" />
@@ -24,8 +20,9 @@
     <file path="/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364724893140" ignored="false" />
     <file path="/main.html" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364745909594" ignored="false" />
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364738465830" ignored="false" />
-    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904073060" ignored="false" />
+    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904554000" ignored="false" />
     <file path="$PROJECT_DIR$/sysmon/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903034604" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904553703" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,19 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="19" selection-start="3345" selection-end="3345" vertical-scroll-proportion="0.0">
+            <state line="172" column="82" selection-start="4230" selection-end="4230" vertical-scroll-proportion="0.428115">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="18" selection-start="236" selection-end="236" vertical-scroll-proportion="0.27317882">
+            <state line="15" column="3" selection-start="299" selection-end="299" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
@@ -124,9 +121,9 @@
         <option value="$PROJECT_DIR$/sysmon/app/main.html" />
         <option value="$PROJECT_DIR$/fun.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/channel.js" />
         <option value="$PROJECT_DIR$/policyServer.js" />
         <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/channel.js" />
       </list>
     </option>
   </component>
@@ -347,7 +344,11 @@
       <created>1364903895430</created>
       <updated>1364903895430</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="upload">
+      <created>1364904557797</created>
+      <updated>1364904557797</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -372,8 +373,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="22" width="1456" height="774" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3730887" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980111" sideWeight="0.70731705" order="1" side_tool="false" content_ui="tabs" />
@@ -387,7 +389,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -476,7 +477,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sysmon/app/app_runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="61" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.0" />
+        <state line="50" column="61" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -496,7 +499,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sysmon/app/app_runner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="61" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.0" />
+        <state line="50" column="61" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sysmon/app/main.html">
@@ -532,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="6" selection-start="5451" selection-end="5451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fun.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="25" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
@@ -546,16 +544,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel.js">
+    <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="19" selection-start="3345" selection-end="3345" vertical-scroll-proportion="0.0">
+        <state line="15" column="3" selection-start="299" selection-end="299" vertical-scroll-proportion="-9.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="236" selection-end="236" vertical-scroll-proportion="0.27317882">
+        <state line="211" column="6" selection-start="5451" selection-end="5451" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="172" column="82" selection-start="4230" selection-end="4230" vertical-scroll-proportion="0.428115">
           <folding />
         </state>
       </provider>
