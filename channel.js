@@ -31,6 +31,8 @@ Channel = function (opId,syncAll)
         log(self.headlog() + 'channel['+ opId +'] sock count:' + this.list.length
             + ', maxcount:' + this.maxcount  );
 
+        this.sock.pipe(tclient.sock);
+
         if(this.syncAll)
         {
             tclient.syncchannel=this;
@@ -39,6 +41,7 @@ Channel = function (opId,syncAll)
         {
             tclient.channel=this;
         }
+
     }
 
     //查找是否已经加入
@@ -55,6 +58,7 @@ Channel = function (opId,syncAll)
             this.list.splice( idx, 1 ); //列表中删除一个元素
         }
         log(this.headlog() + 'sock['+ opId +'] remove, count=' + this.count() );
+        this.sock.unpipe(tclient.sock);
     }
     //客户端个数
     this.count = function() {
@@ -168,7 +172,7 @@ Channel = function (opId,syncAll)
         if(config.LogOn)
             log(self.headlog() +'broadcast data: ' + opId);
         //广播频道消息
-        self.broadcast(data);
+        //self.broadcast(data);
         //更新存活时间
         self.lastAlive  =   new Date();
     });
