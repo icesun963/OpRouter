@@ -2,10 +2,10 @@
     "version": "v0.0.1",
     "ServerPort" : 8066,
 
-    "ClientHost": "10.241.35.5",
-    "ClientPort": 8066,
-    "SyncHost" :"10.241.35.5",
-    "SyncPort" : 8066,
+    "ClientHost": "127.0.0.1",
+    "ClientPort": 8077,
+    "SyncHost" : "127.0.0.1",
+    "SyncPort" : 8077,
 
     "AliveSecond": 30 ,
     "DataDumpOn" : false,

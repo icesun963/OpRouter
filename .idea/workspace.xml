@@ -7,7 +7,7 @@
     <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364897377144" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364729636221" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364730958105" ignored="false" />
-    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364897858330" ignored="false" />
+    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364898471680" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364898004151" ignored="false" />
     <file path="/config.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363447011502" ignored="false" />
@@ -43,7 +43,7 @@
       <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="51" selection-start="188" selection-end="188" vertical-scroll-proportion="0.3986014">
+            <state line="4" column="28" selection-start="72" selection-end="81" vertical-scroll-proportion="0.17715618">
               <folding />
             </state>
           </provider>
@@ -79,7 +79,7 @@
       <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="69" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0">
+            <state line="149" column="30" selection-start="3750" selection-end="3750" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -538,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="69" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sysmon/core.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="49" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
@@ -566,9 +559,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/channel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="30" selection-start="3750" selection-end="3750" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="51" selection-start="188" selection-end="188" vertical-scroll-proportion="0.3986014">
+        <state line="4" column="28" selection-start="72" selection-end="81" vertical-scroll-proportion="0.17715618">
           <folding />
         </state>
       </provider>
