@@ -153,6 +153,10 @@ net.createServer(function(sock) {
 
                     data=JSON.parse(data.toString('utf8'));
 
+                    if(data.cmd=="Live")
+                    {
+                        return;
+                    }
                     if(data.cmd=='Sync')
                     {
 

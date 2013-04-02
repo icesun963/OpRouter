@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="" />
+    <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364902698480" ignored="false" />
+    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364905414053" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364729636221" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364902607123" ignored="false" />
     <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904549559" ignored="false" />
@@ -20,9 +23,8 @@
     <file path="/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364724893140" ignored="false" />
     <file path="/main.html" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364745909594" ignored="false" />
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364738465830" ignored="false" />
-    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904554000" ignored="false" />
+    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364905284950" ignored="false" />
     <file path="$PROJECT_DIR$/sysmon/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903034604" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364904553703" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +44,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="6" selection-start="5451" selection-end="5451" vertical-scroll-proportion="0.0">
+            <state line="157" column="31" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.38338658">
               <folding />
             </state>
           </provider>
@@ -60,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="82" selection-start="4230" selection-end="4230" vertical-scroll-proportion="0.428115">
+            <state line="108" column="53" selection-start="2739" selection-end="2743" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -120,10 +122,10 @@
         <option value="$PROJECT_DIR$/sysmon/app/app_runner.js" />
         <option value="$PROJECT_DIR$/sysmon/app/main.html" />
         <option value="$PROJECT_DIR$/fun.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/policyServer.js" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/channel.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -348,7 +350,11 @@
       <created>1364904557797</created>
       <updated>1364904557797</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="upload">
+      <created>1364905288697</created>
+      <updated>1364905288697</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -551,16 +557,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="6" selection-start="5451" selection-end="5451" vertical-scroll-proportion="0.0">
+        <state line="108" column="53" selection-start="2739" selection-end="2743" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/channel.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="82" selection-start="4230" selection-end="4230" vertical-scroll-proportion="0.428115">
+        <state line="157" column="31" selection-start="3605" selection-end="3605" vertical-scroll-proportion="0.38338658">
           <folding />
         </state>
       </provider>
