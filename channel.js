@@ -182,8 +182,10 @@ Channel = function (opId,syncAll)
                 {
                     log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length + " data:" + mydata);
                 }
+                var sbuff = new  ByteRequest();
+                sbuff.writeData(mydata);
                 //广播频道消息
-                self.broadcast(mydata);
+                self.broadcast(sbuff.buffer);
             });
         if(config.LogOn){
             for( var i = 0; i < self.list.length; i++ ) {
