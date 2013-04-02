@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel.js" afterPath="$PROJECT_DIR$/channel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/policyServer.js" afterPath="$PROJECT_DIR$/policyServer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpRouter.iws" />
@@ -23,7 +23,7 @@
     <file path="/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364724893140" ignored="false" />
     <file path="/main.html" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364745909594" ignored="false" />
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364738465830" ignored="false" />
-    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364909148749" ignored="false" />
+    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364909293589" ignored="false" />
     <file path="$PROJECT_DIR$/sysmon/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903034604" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,10 +62,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="187" column="43" selection-start="4704" selection-end="4704" vertical-scroll-proportion="0.53435117">
+            <state line="94" column="37" selection-start="2348" selection-end="2351" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="policyServer.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/policyServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="10" selection-start="226" selection-end="226" vertical-scroll-proportion="0.31578946">
               <folding />
             </state>
           </provider>
@@ -110,13 +119,13 @@
         <option value="$PROJECT_DIR$/sysmon/core.js" />
         <option value="$PROJECT_DIR$/sysmon/app/app_runner.js" />
         <option value="$PROJECT_DIR$/sysmon/app/main.html" />
-        <option value="$PROJECT_DIR$/policyServer.js" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/client.js" />
         <option value="$PROJECT_DIR$/routerChannel.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/fun.js" />
         <option value="$PROJECT_DIR$/channel.js" />
+        <option value="$PROJECT_DIR$/policyServer.js" />
       </list>
     </option>
   </component>
@@ -360,7 +369,11 @@
       <created>1364909153344</created>
       <updated>1364909153344</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="upload">
+      <created>1364909297387</created>
+      <updated>1364909297387</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -537,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/policyServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routerChannel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="31" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.3486005">
@@ -574,7 +580,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="43" selection-start="4704" selection-end="4704" vertical-scroll-proportion="0.53435117">
+        <state line="94" column="37" selection-start="2348" selection-end="2351" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/policyServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="10" selection-start="226" selection-end="226" vertical-scroll-proportion="0.31578946">
           <folding />
         </state>
       </provider>
