@@ -203,8 +203,8 @@ net.createServer(function(sock) {
                         channel.add(client);
                         syncchannel.add(client);
 
-                        if(!client.syncd)
-                            syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
+
+                        syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
 
                     }
                     else if(data.cmd=='SyncLeave')
