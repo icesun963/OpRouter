@@ -143,7 +143,7 @@ Channel = function (opId,syncAll)
 
     this.sock.connect(port, host, function() {
         this.setNoDelay(true);
-        this.setMaxListeners(0);
+
         log(self.headlog() + 'channel['+ opId +']  CONNECTED TO: ' + host + ':' + port);
 
         // 建立连接后立即向服务器发送数据，服务器将收到这些数据
@@ -172,7 +172,7 @@ Channel = function (opId,syncAll)
         if(config.LogOn)
             log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length);
         //广播频道消息
-        //self.broadcast(data);
+        self.broadcast(data);
         //更新存活时间
         self.lastAlive  =   new Date();
     });
