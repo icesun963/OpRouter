@@ -179,7 +179,7 @@ Channel = function (opId,syncAll)
             buffer.readData(function(buff,srcbuff){
                 if(config.LogOn)
                 {
-                    log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length + " data:" + buff);
+                    log(self.headlog() +'broadcast data: ' + opId + ' size:' + buff.length + " data:" + buff);
                 }
 
                 var buffer = new ByteRequest();

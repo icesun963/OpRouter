@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel.js" afterPath="$PROJECT_DIR$/channel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fun.js" afterPath="$PROJECT_DIR$/fun.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpRouter.iws" />
@@ -24,7 +23,7 @@
     <file path="/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364724893140" ignored="false" />
     <file path="/main.html" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364745909594" ignored="false" />
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364738465830" ignored="false" />
-    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364912352000" ignored="false" />
+    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364912910556" ignored="false" />
     <file path="$PROJECT_DIR$/sysmon/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903034604" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
       <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="44" selection-start="4792" selection-end="4792" vertical-scroll-proportion="0.91847825">
+            <state line="181" column="83" selection-start="4545" selection-end="4545" vertical-scroll-proportion="0.29076087">
               <folding />
             </state>
           </provider>
@@ -397,7 +396,11 @@
       <created>1364912357733</created>
       <updated>1364912357733</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="upload">
+      <created>1364912914501</created>
+      <updated>1364912914501</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -506,7 +509,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="183" />
+      <option name="time" value="184" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -611,7 +614,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="44" selection-start="4792" selection-end="4792" vertical-scroll-proportion="0.91847825">
+        <state line="181" column="83" selection-start="4545" selection-end="4545" vertical-scroll-proportion="0.29076087">
           <folding />
         </state>
       </provider>
