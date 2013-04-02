@@ -200,7 +200,7 @@ net.createServer(function(sock) {
                             syncchannel = new Channel(opid,true);
                             SyncChannels.put(opid,syncchannel);
                             //初始连接用户,会收到Sync命令
-                            client.syncd=true;
+                            //client.syncd=true;
                         }
                         else
                         {
