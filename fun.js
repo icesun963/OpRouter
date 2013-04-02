@@ -169,7 +169,7 @@ ByteRequest = function()
                 else
                 {
                     if(config.LogOn)
-                        log("callback:" + data);
+                        log(">>callback:" + data);
 
                     if(callback){
                         callback(data);

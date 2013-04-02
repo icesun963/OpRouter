@@ -22,7 +22,7 @@ Channel = function (opId,syncAll)
 
     //加入客户端列表
     this.add = function( tclient ) {
-        if(find(tclient)==-1)
+        if(this.find(tclient)==-1)
         {
             this.list.push( tclient );
             log(self.headlog() + 'channel[] sock add' );
