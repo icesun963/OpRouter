@@ -23,7 +23,7 @@
     <file path="/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364724893140" ignored="false" />
     <file path="/main.html" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364745909594" ignored="false" />
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364738465830" ignored="false" />
-    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364912910556" ignored="false" />
+    <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364913024401" ignored="false" />
     <file path="$PROJECT_DIR$/sysmon/core.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364903034604" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,7 @@
       <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="83" selection-start="4545" selection-end="4545" vertical-scroll-proportion="0.29076087">
+            <state line="112" column="69" selection-start="3007" selection-end="3007" vertical-scroll-proportion="0.7798913">
               <folding />
             </state>
           </provider>
@@ -400,7 +400,11 @@
       <created>1364912914501</created>
       <updated>1364912914501</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="upload">
+      <created>1364913028586</created>
+      <updated>1364913028586</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -614,7 +618,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="83" selection-start="4545" selection-end="4545" vertical-scroll-proportion="0.29076087">
+        <state line="112" column="69" selection-start="3007" selection-end="3007" vertical-scroll-proportion="0.7798913">
           <folding />
         </state>
       </provider>

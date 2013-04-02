@@ -108,8 +108,10 @@ Channel = function (opId,syncAll)
         }
         //客户端数量
         if(config.LogOn)
+        {
             log(self.headlog() + 'broadcast to ['+ opId +'] ' + ccount + ' users' );
-
+            log('=================================================');
+        }
     }
 
     //关闭频道
