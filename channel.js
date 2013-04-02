@@ -170,7 +170,7 @@ Channel = function (opId,syncAll)
     this.sock.on('data', function(data) {
 
         if(config.LogOn)
-            log(self.headlog() +'broadcast data: ' + opId);
+            log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length);
         //广播频道消息
         //self.broadcast(data);
         //更新存活时间
