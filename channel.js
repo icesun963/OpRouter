@@ -176,13 +176,19 @@ Channel = function (opId,syncAll)
         self.lastAlive  =   new Date();
 
             buffer.append(data);
-            buffer.readData(function(mydata,src){
+            buffer.readData(function(buff,srcbuff){
                 if(config.LogOn)
                 {
-                    log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length + " data:" + mydata);
+                    log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length + " data:" + buff);
                 }
+
+                var buffer = new ByteRequest();
+
+                data = JSON.parse(buff);
+
+                buffer.writeData(data);
                 //广播频道消息
-                self.broadcast(src);
+                self.broadcast(buffer.buffer);
             });
 
     });

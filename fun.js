@@ -128,6 +128,7 @@ ByteRequest = function()
 
             var inStream = new InStream(this.buffer);
             var lenght=inStream.readVarint32();
+
             var datatype=inStream.readVarint32();
 
             var mylenght=inStream.offset();
@@ -137,13 +138,14 @@ ByteRequest = function()
 
             if(this.buffer.length>=lenght + mylenght)
             {
-                var data= this.buffer.slice(mylenght, lenght + mylenght);
+                var data = this.buffer.slice(mylenght, lenght + mylenght);
+                var srcdata = this.buffer.slice(0, lenght + mylenght);
                 if(datatype == 1)
                 {
                     zlib.inflateRaw(data, function(err, buffer) {
                         if (!err) {
                             if(callback){
-                                callback(buffer,this.buffer);
+                                callback(buffer,srcdata);
                             }
                         }
                     });
@@ -155,7 +157,7 @@ ByteRequest = function()
                 else
                 {
                     if(callback){
-                        callback(data,this.buffer);
+                        callback(data,srcdata);
                     }
                 }
 
