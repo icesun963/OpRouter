@@ -98,7 +98,7 @@ Channel = function (opId,syncAll)
                     cuser.syncd = true;
                 }
                 if(config.LogOn)
-                    log('broadcast user[' + i + ']:' + cuser.remoteAddress + ':' + cuser.remotePort );
+                    log(self.headlog() + 'broadcast user[' + i + ']:' + cuser.remoteAddress + ':' + cuser.remotePort );
             }
             catch ( err )
             {

@@ -210,6 +210,7 @@ net.createServer(function(sock) {
                             }
                             else
                             {
+                                log('+Creat Syncchannel:' + opid);
                                 syncchannel = new Channel(opid,true);
                                 SyncChannels.put(opid,syncchannel);
                             }
@@ -267,7 +268,7 @@ net.createServer(function(sock) {
 
 }).listen(PORT);
 log('--------------------------------------------');
-log('Server listening on :'+ PORT);
+log('Server listening on :'+ PORT + ' ver:' + config.version);
 log('--------------------------------------------');
 
 
