@@ -16,23 +16,23 @@ client.connect(PORT, HOST, function() {
 
 
     //使用同步频道 或者切换频道
-    //var cmd= { cmd :"GetOpIdByToken",rcmd : 1000,args:["test1"] }
-    var cmd = { cmd : "Sync"  , args:["10001"]}
+    var cmd= { cmd :"GetOpIdByToken",rcmd : 1000,args:["test1"] }
+    //var cmd = { cmd : "Sync"  , args:["10001"]}
     var buff= new ByteRequest();
 
     buff.writeData(cmd);
 
     client.write(buff.buffer);
-
+    log('Send Data: ' + buff.buffer);
 });
 
 // 为客户端添加“data”事件处理函数
 // data是服务器发回的数据
 client.on('data', function(data) {
 
-    log('DATA: ' + data);
+    //log('DATA: ' + data);
     // 完全关闭连接
-    return;
+
     var buff= new ByteRequest();
     buff.append(data);
     buff.readData(function(data){
@@ -63,7 +63,12 @@ client.on('data', function(data) {
             if(data[0].Op==0)
                 outbuff.writeData({ cmd : "LoginByToken" , args:["test1"] , rcmd:1002 });
         }
-        client.write(outbuff.buffer);
+        if(outbuff.buffer.length>0)
+        {
+            client.write(outbuff.buffer);
+
+            log('Send Data: ' + outbuff.buffer);
+        }
     });
 });
 

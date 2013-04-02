@@ -87,7 +87,7 @@ Router.onDataCallBack(function(data){
         for(var i=0;i<Router.list.length;i++)
         {
            var client= Router.list[i];
-           if(client && client.clientId==cid)
+           if(client && client.clientId == cid)
            {
                client.send(rdata);
                break;

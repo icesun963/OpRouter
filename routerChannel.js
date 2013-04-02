@@ -129,7 +129,7 @@ RouterChannel = function()
             }
             catch (err)
             {
-                log(err.direction);
+                log("routerChannel error:" + err.direction);
             }
         });
 

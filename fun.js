@@ -19,7 +19,7 @@ log = function ( msg ) {
         console.log("bad!!!");
     }
     if(config.LogOn)
-        if( !config.DataDumpOn)
+        if(!config.DataDumpOn)
         {
             if(msg.toString().indexOf(">>")==0 || msg.toString().indexOf("<<")==0 )
                  return;
@@ -137,17 +137,30 @@ ByteRequest = function()
             if(this.buffer.length>=lenght + mylenght)
             {
                 var data= this.buffer.slice(mylenght, lenght + mylenght);
-                if(datatype==2)
+                if(datatype == 1)
                 {
-                    log('Gizp..');
+                    zlib.inflateRaw(data, function(err, buffer) {
+                        if (!err) {
+                            if(callback){
+                                callback(buffer,this.buffer);
+                            }
+                        }
+                    });
+                }
+                else if(datatype == 2)
+                {
+
                 }
                 else
                 {
                     if(callback){
                         callback(data,this.buffer);
+                    }
                 }
-               }
-               this.buffer= this.buffer.slice(lenght+ inStream.offset() );
+
+
+
+                this.buffer= this.buffer.slice(lenght+ inStream.offset() );
             }
             else
             {
