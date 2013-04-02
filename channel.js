@@ -147,7 +147,7 @@ Channel = function (opId,syncAll)
 
     this.sock.connect(port, host, function() {
         this.setNoDelay(true);
-        this.setMaxListeners(0);
+        this.setMaxListeners(200);
         log(self.headlog() + 'channel['+ opId +']  CONNECTED TO: ' + host + ':' + port);
 
         // 建立连接后立即向服务器发送数据，服务器将收到这些数据
