@@ -59,7 +59,6 @@ Channel = function (opId,syncAll)
             this.list.splice( idx, 1 ); //列表中删除一个元素
         }
         log(this.headlog() + 'sock['+ opId +'] remove, count=' + this.count() );
-        this.sock.unpipe(tclient.sock);
     }
     //客户端个数
     this.count = function() {

@@ -89,7 +89,7 @@ Client = function(sock)
             this.syncchannel.remove(this);
             log('[' + this.clientId +']Remove From SyncChannel:' + this.syncchannel.opid);
         }
-        syncd=false;
+        this.syncd = false;
         this.channel=null;
         this.syncchannel=null;
     }

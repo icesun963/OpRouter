@@ -202,6 +202,7 @@ net.createServer(function(sock) {
                         }
                         else
                         {
+
                             channel = Channels.get(opid);
 
                             if(SyncChannels.containsKey(opid))
