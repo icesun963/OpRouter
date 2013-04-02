@@ -9,7 +9,7 @@
 
     "AliveSecond": 30 ,
     "DataDumpOn" : false,
-    "LogOn" : false,
+    "LogOn" : true,
     "AutoExitOnNoClient" : true ,
     "MaxErrorCount" : 10
 }
