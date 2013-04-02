@@ -266,9 +266,9 @@ net.createServer(function(sock) {
     });
 
 }).listen(PORT);
-
+log('--------------------------------------------');
 log('Server listening on :'+ PORT);
-
+log('--------------------------------------------');
 
 
 
