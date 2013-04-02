@@ -184,12 +184,13 @@ ByteRequest = function()
         var buff= new Buffer(jsonstr);
         var outStream = new OutStream();
         outStream.writeVarint32(buff.length);
-        var dt=0;
-        if(dt==0)
+        var dt = 0;
+        if( dt == 0 )
         {
             outStream.writeVarint32(dt);
             outStream.writeRaw(buff);
-            this.buffer=new Buffer( outStream.bytes());
+
+            this.buffer=new Buffer(outStream.bytes());
         }
     };
 }

@@ -108,7 +108,7 @@ Channel = function (opId,syncAll)
         }
         //客户端数量
         if(config.LogOn)
-            log(self.headlog() + 'brocast to ['+ opId +'] ' + ccount + ' users' );
+            log(self.headlog() + 'broadcast to ['+ opId +'] ' + ccount + ' users' );
 
     }
 
@@ -176,15 +176,13 @@ Channel = function (opId,syncAll)
         self.lastAlive  =   new Date();
 
             buffer.append(data);
-            buffer.readData(function(mydata){
+            buffer.readData(function(mydata,src){
                 if(config.LogOn)
                 {
                     log(self.headlog() +'broadcast data: ' + opId + ' size:' + data.length + " data:" + mydata);
                 }
-                var sbuff = new  ByteRequest();
-                sbuff.writeData(mydata);
                 //广播频道消息
-                self.broadcast(sbuff.buffer);
+                self.broadcast(src);
             });
 
     });
