@@ -33,16 +33,11 @@ Channel = function (opId,syncAll)
 
         if(this.syncAll)
         {
-            for( var i = 0; i < this.list.length; i++ ) {
-                var cuser = this.list[i];
-                //客户端对象
-                if( ! cuser ) continue;
-                //如果同步频道,仅广播未同步的
-                if(cuser.syncd)
-                {
-                    this.remove(cuser);
-                }
-            }
+            tclient.syncchannel=this;
+        }
+        else
+        {
+            tclient.channel=this;
         }
     }
 
@@ -88,12 +83,16 @@ Channel = function (opId,syncAll)
             {
                 continue;
             }
+
             ccount++;
             //群发
             try
             {
                 cuser.sock.write( msg );
-                cuser.syncd = true;
+                if(this.syncAll)
+                {
+                    cuser.syncd = true;
+                }
             }
             catch ( err )
             {
@@ -140,6 +139,7 @@ Channel = function (opId,syncAll)
 
     this.sock.connect(port, host, function() {
         this.setNoDelay(true);
+        this.setMaxListeners(0);
         log(self.headlog() + 'channel['+ opId +']  CONNECTED TO: ' + host + ':' + port);
 
         // 建立连接后立即向服务器发送数据，服务器将收到这些数据
