@@ -197,10 +197,8 @@ net.createServer(function(sock) {
                             channel = new Channel(opid,false);
                             Channels.put(opid,channel);
 
-                            syncchannel = new Channel(opid,true);
-                            SyncChannels.put(opid,syncchannel);
                             //初始连接用户,会收到Sync命令
-                            //client.syncd=true;
+                            client.syncd=true;
                         }
                         else
                         {
@@ -210,6 +208,11 @@ net.createServer(function(sock) {
                             {
                                 syncchannel = SyncChannels.get(opid);
                             }
+                            else
+                            {
+                                syncchannel = new Channel(opid,true);
+                                SyncChannels.put(opid,syncchannel);
+                            }
                             if(!syncchannel)
                             {
                                  log("error>>sychannel is null")
@@ -217,10 +220,11 @@ net.createServer(function(sock) {
                         }
 
                         channel.add(client);
-                        syncchannel.add(client);
-
-
-                        syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
+                        if(syncchannel)
+                        {
+                            syncchannel.add(client);
+                            syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
+                        }
 
                     }
                     else if(data.cmd=='SyncLeave')
