@@ -80,11 +80,12 @@ Client = function(sock)
         if(this.channel!=null)
         {
             this.channel.remove(this);
-            log('[' + this.clientId +']Remove From Room:' + this.channel.opid);
+            log('[' + this.clientId +']Remove From Channel:' + this.channel.opid);
         }
         if(this.syncchannel!=null)
         {
             this.syncchannel.remove(this);
+            log('[' + this.clientId +']Remove From SyncChannel:' + this.syncchannel.opid);
         }
         syncd=false;
         this.channel=null;
