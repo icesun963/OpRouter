@@ -17,7 +17,7 @@ var Channels = new Hashtable();
 //完整数据广播频道
 var SyncChannels = new Hashtable();
 
-/*
+
 //检查存活频道
 setInterval(function(){
 
@@ -60,9 +60,9 @@ setInterval(function(){
         {
             process.exit();
         }
-},60*1000);
+},1*60*1000);
 
- */
+
 //主通道
 var Router = new RouterChannel();
 
@@ -268,7 +268,7 @@ net.createServer(function(sock) {
 
 }).listen(PORT);
 log('--------------------------------------------');
-log('Server listening on :'+ PORT + ' ver:' + config.version);
+log('Server listening on :'+ PORT + ' ver:' + config.Version);
 log('--------------------------------------------');
 
 
