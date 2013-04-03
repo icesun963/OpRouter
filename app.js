@@ -48,7 +48,7 @@ setInterval(function(){
 
     if(remove)
         log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
-},3000);
+},10 * 1000);
 
 
 
@@ -60,7 +60,7 @@ setInterval(function(){
         {
             process.exit();
         }
-},1*60*1000);
+},5 * 60 * 1000);
 
 
 //主通道
