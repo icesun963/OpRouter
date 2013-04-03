@@ -183,7 +183,11 @@ Channel = function (opId,syncAll)
                 {
                     log(self.headlog() +'broadcast data: ' + opId + ' size:' + buff.length + " data:" + buff);
                 }
-
+                if(syncAll && type==2)
+                {
+                    //不广播模板数据
+                    return;
+                }
                 //转发完整包
                 var outbuffer = new ByteRequest();
                 //写入原始数据
