@@ -75,7 +75,9 @@ getNowUser = function(){
 };
 
 //全同步参数
-Router.onDataCallBack(function(data){
+Router.onDataCallBack(function(data,type){
+    if(type != 0)
+        return;
 
     var rdata = JSON.parse(data.toString('utf8'));
 
@@ -169,10 +171,7 @@ net.createServer(function(sock) {
 
                     data=JSON.parse(data.toString('utf8'));
 
-                    if(data.cmd=="Live")
-                    {
-                        return;
-                    }
+
                     if(data.cmd=='Sync')
                     {
 

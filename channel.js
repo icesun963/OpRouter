@@ -178,19 +178,18 @@ Channel = function (opId,syncAll)
         self.lastAlive  =   new Date();
 
             buffer.append(data);
-            buffer.readData(function(buff,srcbuff){
+            buffer.readData(function(buff,type){
                 if(config.LogOn)
                 {
                     log(self.headlog() +'broadcast data: ' + opId + ' size:' + buff.length + " data:" + buff);
                 }
 
-                var buffer = new ByteRequest();
-
-                data = JSON.parse(buff);
-
-                buffer.writeData(data);
+                //转发完整包
+                var outbuffer = new ByteRequest();
+                //写入原始数据
+                outbuffer.writeRaw(buff,type);
                 //广播频道消息
-                self.broadcast(buffer.buffer);
+                self.broadcast(outbuffer.buffer);
             });
 
     });

@@ -120,12 +120,11 @@ RouterChannel = function()
     sock.on('data', function(buff) {
 
         client.byteRequest.append(buff);
-        client.byteRequest.readData(function(data){
+        client.byteRequest.readData(function(data,type){
             try
             {
                 if(self.onDataGet_CallBack)
-                    self.onDataGet_CallBack(data);
-
+                    self.onDataGet_CallBack(data,type);
             }
             catch (err)
             {

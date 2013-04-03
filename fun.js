@@ -114,7 +114,12 @@ ByteRequest = function()
     }
 
     this.readCmd=function(callback){
-      this.readData(callback);
+      this.readData(function(data,type){
+          if(type==0)
+          {
+               callback(data,type);
+          }
+      });
     };
 
     this.readData=function(callback){
@@ -148,31 +153,36 @@ ByteRequest = function()
             }
             if(this.buffer.length>=lenght + mylenght)
             {
+                if(datatype != 0 && datatype!=1 && datatype!=2 && datatype!=10 && datatype!=11)
+                {
+                    this.buffer = new Buffer(0);
+                    log('drop error type>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+                }
+
                 var data = this.buffer.slice(mylenght, lenght + mylenght);
+
+                /*
                 if(datatype == 1)
                 {
                     if(config.LogOn)
-                        log("zlib...");
+                        log("fun zlib...");
 
                     zlib.inflateRaw(data, function(err, buffer) {
                         if (!err) {
                             if(callback){
-                                callback(buffer);
+                                callback(buffer, datatype-1 );
                             }
                         }
                     });
                 }
-                else if(datatype == 2)
-                {
-
-                }
-                else
+                */
+                //else
                 {
                     if(config.LogOn)
                         log(">>callback:" + data);
 
                     if(callback){
-                        callback(data);
+                        callback(data,datatype);
                     }
                 }
 
@@ -208,6 +218,15 @@ ByteRequest = function()
 
             this.buffer=new Buffer(outStream.bytes());
         }
+    };
+
+    this.writeRaw=function(buff,type){
+        var outStream = new OutStream();
+        outStream.writeVarint32(buff.length);
+        outStream.writeVarint32(type);
+        outStream.writeRaw(buff);
+        this.buffer=new Buffer(outStream.bytes());
+
     };
 }
 
