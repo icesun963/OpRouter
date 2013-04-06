@@ -129,15 +129,7 @@ net.createServer(function(sock) {
 
     client.onClose(function(){
         Router.remove(client);
-        /*
-        if(client.syncchannel)
-        {
-             if(client.syncchannel.count()==1)
-             {
-                 SyncChannels.remove(client.syncchannel.opid);
-                 client.syncchannel.close();
-             }
-        }
+
         if(client.channel)
         {
             if(client.channel.count()==1)
@@ -146,7 +138,7 @@ net.createServer(function(sock) {
                 client.channel.close();
             }
         }
-        */
+
     });
 
     // 为这个socket实例添加一个"close"事件处理函数
