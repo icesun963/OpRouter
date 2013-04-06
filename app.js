@@ -23,7 +23,9 @@ setInterval(function(){
 
     var keys=Channels.keys();
     var skeys=SyncChannels.keys();
+
     var remove=false;
+
     for(var i=0 ;i<keys.length; i++)
     {
         var key=       keys[i];
@@ -35,25 +37,8 @@ setInterval(function(){
             if(sc>config.AliveSecond)
             {
 
-                try
-                {
-                    channel.close();
-                    Channels.remove(key);
-                }
-                catch (err){
-
-                }
-                try
-                {
-                    var syncchannel = SyncChannels.get(key);
-                    SyncChannels.remove(key);
-                    if(syncchannel)
-                        syncchannel.close();
-
-                }
-                catch (err){
-
-                }
+                channel.close();
+                Channels.remove(key);
 
                 log('Remove Channel:' + key);
                 remove = true;
@@ -61,9 +46,25 @@ setInterval(function(){
         }
     }
 
+    for(var i=0 ;i<skeys.length; i++)
+    {
+        var key =  skeys[i];
+        if(!Channels.containsKey(key))
+        {
+            var channel = SyncChannels.get(key);
+            if(channel )
+            {
+                channel.close();
+                SyncChannels.remove(key);
+                log('Remove SyncChannel:' + key);
+                remove = true;
+            }
+        }
+    }
+
     if(remove)
         log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
-},10 * 1000);
+},1 * 1000);
 
 
 
@@ -128,6 +129,7 @@ net.createServer(function(sock) {
 
     client.onClose(function(){
         Router.remove(client);
+        /*
         if(client.syncchannel)
         {
              if(client.syncchannel.count()==1)
@@ -144,6 +146,7 @@ net.createServer(function(sock) {
                 client.channel.close();
             }
         }
+        */
     });
 
     // 为这个socket实例添加一个"close"事件处理函数
