@@ -34,12 +34,27 @@ setInterval(function(){
 
             if(sc>config.AliveSecond)
             {
-                channel.close();
-                Channels.remove(key);
-                var syncchannel = SyncChannels.get(key);
-                if(syncchannel)
-                    syncchannel.close();
-                SyncChannels.remove(key);
+
+                try
+                {
+                    channel.close();
+                    Channels.remove(key);
+                }
+                catch (err){
+
+                }
+                try
+                {
+                    var syncchannel = SyncChannels.get(key);
+                    SyncChannels.remove(key);
+                    if(syncchannel)
+                        syncchannel.close();
+
+                }
+                catch (err){
+
+                }
+
                 log('Remove Channel:' + key);
                 remove = true;
             }
