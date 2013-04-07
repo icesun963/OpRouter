@@ -36,7 +36,7 @@ setInterval(function(){
             {
                 channel.close();
                 Channels.remove(key);
-                log('Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
+                log('--Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
             }
         }
@@ -52,7 +52,7 @@ setInterval(function(){
             {
                 channel.close();
                 SyncChannels.remove(key);
-                log('Remove SyncChannel:' + key);
+                log('--Remove SyncChannel:' + key);
                 remove = true;
             }
         }
