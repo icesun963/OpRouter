@@ -40,7 +40,7 @@ setInterval(function(){
                 channel.close();
                 Channels.remove(key);
 
-                log('Remove Channel:' + key);
+                log('Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
             }
         }
