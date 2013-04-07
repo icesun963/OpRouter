@@ -30,6 +30,27 @@ log = function ( msg ) {
     console.log( data.toLocaleTimeString()  + ':' + data.getMilliseconds() + ' ' + msg );
 }
 
+//检查Cpu 大于90 则退出
+setInterval(function(){
+    try
+    {
+
+        var ps = exec('cat /proc/loadavg', function(err, data, stderr){
+            if (err) return false;
+            data = (data + '').split(' ');
+            var proc = data.slice(0, 3);
+            if(parseFloat(proc[1])>0.9)
+            {
+                process.exit();
+            }
+        });
+    }
+    catch(err)
+    {
+
+    }
+},60*1000);
+
 var clientIdSeed = 1000;
 //===================================================================
 //客户端
