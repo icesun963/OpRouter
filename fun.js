@@ -50,8 +50,8 @@ Client = function(sock)
     this.error = 0;
     var self = this;
 
-    this.onClose=function(callback){
-        this.onClose_CallBack=callback;
+    this.onLeaverChannel=function(callback){
+        this.onLeaverChannel_CallBack=callback;
     };
 
 
@@ -69,8 +69,6 @@ Client = function(sock)
         this.disconnect=true;
         log('[' + this.clientId +']CLOSED: ' +  this.remoteAddress + ':' + this.remotePort );
 
-        if(this.onClose_CallBack)
-            this.onClose_CallBack();
 
         this.leaveChannel();
         this.sock.destroy();
@@ -89,8 +87,12 @@ Client = function(sock)
             this.syncchannel.remove(this);
             log('[' + this.clientId +']Remove From SyncChannel:' + this.syncchannel.opid);
         }
+
+
         this.syncd = false;
 
+        if(this.onLeaverChannel_CallBack)
+            this.onLeaverChannel_CallBack(this.channel,this.syncchannel);
         this.channel=null;
         this.syncchannel=null;
     }

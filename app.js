@@ -30,11 +30,9 @@ setInterval(function(){
     {
         var key=       keys[i];
         var channel = Channels.get(key);
-        if(channel && channel.lastAlive)
+        if(channel)
         {
-            var sc= (new Date().getTime()- channel.lastAlive.getTime())/1000;
-
-            if(sc>config.AliveSecond && channel.count() <=0 )
+            if(channel.timeOut() && channel.count() <=0 )
             {
                 channel.close();
                 Channels.remove(key);
@@ -124,8 +122,23 @@ net.createServer(function(sock) {
 
     Router.add(client);
 
-    client.onClose(function(){
+    client.onLeaverChannel(function(channel,syncchannel){
         Router.remove(client);
+        if(channel && channel.count()==0)
+        {
+             channel.close();
+             Channels.remove(channel.opid);
+
+             log('Remove Channel Count:' + SyncChannels.size()  + "/" + Channels.size());
+
+        }
+        if(syncchannel && syncchannel.count()==0)
+        {
+             syncchannel.close();
+             SyncChannels.remove(syncchannel.opid);
+
+            log('Remove SyncChannel Count:' + SyncChannels.size()  + "/" + Channels.size());
+        }
     });
 
     // 为这个socket实例添加一个"close"事件处理函数

@@ -16,9 +16,20 @@ Channel = function (opId,syncAll)
     this.maxcount   = 0;    //历史最大客户端数量
     this.opid       = opId;
     this.syncAll       = syncAll;
-    this.lastAlive  =   new Date();//最后更新时间
+    var lastAlive  =   new Date();//最后更新时间
 
     var self = this;
+
+    this.timeOut=function(){
+        //log(self.headlog() + 'channel:' + this.lastAlive);
+        var sc= (new Date().getTime()- this.lastAlive.getTime())/1000;
+        if(sc>config.AliveSecond)
+        {
+            log(self.headlog() + 'channel[' + opId + '] TimeOut:' + lastAlive );
+            return true;
+        }
+        return false;
+    }
 
     //加入客户端列表
     this.add = function( tclient ) {
@@ -120,7 +131,7 @@ Channel = function (opId,syncAll)
         {
             var client=this.list[i];
             if(client)
-                client.close();
+                client.leaveChannel();
         }
         this.sock.destroy();
     }
