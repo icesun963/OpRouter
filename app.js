@@ -17,7 +17,7 @@ var Channels = new Hashtable();
 //完整数据广播频道
 var SyncChannels = new Hashtable();
 
-/*
+
 //检查存活频道
 setInterval(function(){
 
@@ -36,10 +36,8 @@ setInterval(function(){
 
             if(sc>config.AliveSecond && channel.count() <=0 )
             {
-
                 channel.close();
                 Channels.remove(key);
-
                 log('Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
             }
@@ -66,7 +64,6 @@ setInterval(function(){
         log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
 },1 * 1000);
 
-*/
 
 //如果没有任何连接,重启服务
 setInterval(function(){
@@ -129,16 +126,6 @@ net.createServer(function(sock) {
 
     client.onClose(function(){
         Router.remove(client);
-
-        if(client.channel)
-        {
-            if(client.channel.count()==1)
-            {
-                Channels.remove(client.channel.opid);
-                client.channel.close();
-            }
-        }
-
     });
 
     // 为这个socket实例添加一个"close"事件处理函数
@@ -238,7 +225,7 @@ net.createServer(function(sock) {
                         }
 
                     }
-                    else if(data.cmd=='SyncLeave')
+                    else if(data.cmd == 'SyncLeave')
                     {
                          client.leaveChannel();
                     }
