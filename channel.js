@@ -22,7 +22,7 @@ Channel = function (opId,syncAll)
 
     this.timeOut=function(){
         //log(self.headlog() + 'channel:' + this.lastAlive);
-        var sc= (new Date().getTime()- this.lastAlive.getTime())/1000;
+        var sc= (new Date().getTime()- self.lastAlive.getTime())/1000;
         if(sc>config.AliveSecond)
         {
             log(self.headlog() + 'channel[' + opId + '] TimeOut:' + lastAlive );
