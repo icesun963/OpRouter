@@ -16,13 +16,12 @@ Channel = function (opId,syncAll)
     this.maxcount   = 0;    //历史最大客户端数量
     this.opid       = opId;
     this.syncAll       = syncAll;
-    var lastAlive  =   new Date();//最后更新时间
+    this.lastAlive  =   new Date();//最后更新时间
 
     var self = this;
 
     this.timeOut=function(){
-        //log(self.headlog() + 'channel:' + this.lastAlive);
-        var sc= (new Date().getTime()- self.lastAlive.getTime())/1000;
+        var sc= (new Date().getTime()- this.lastAlive.getTime())/1000;
         if(sc>config.AliveSecond)
         {
             log(self.headlog() + 'channel[' + opId + '] TimeOut:' + lastAlive );
