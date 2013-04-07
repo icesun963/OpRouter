@@ -129,7 +129,7 @@ net.createServer(function(sock) {
              channel.close();
              Channels.remove(channel.opid);
 
-             log('Remove Channel Count:' + SyncChannels.size()  + "/" + Channels.size());
+             log('--Remove Channel Count:' + SyncChannels.size()  + "/" + Channels.size());
 
         }
         if(syncchannel && syncchannel.count()==0)
@@ -137,7 +137,7 @@ net.createServer(function(sock) {
              syncchannel.close();
              SyncChannels.remove(syncchannel.opid);
 
-            log('Remove SyncChannel Count:' + SyncChannels.size()  + "/" + Channels.size());
+            log('--Remove SyncChannel Count:' + SyncChannels.size()  + "/" + Channels.size());
         }
     });
 
