@@ -17,7 +17,7 @@ var Channels = new Hashtable();
 //完整数据广播频道
 var SyncChannels = new Hashtable();
 
-
+/*
 //检查存活频道
 setInterval(function(){
 
@@ -66,7 +66,7 @@ setInterval(function(){
         log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
 },1 * 1000);
 
-
+*/
 
 //如果没有任何连接,重启服务
 setInterval(function(){
