@@ -174,27 +174,27 @@ Channel = function (opId,syncAll)
     // data是服务器发回的数据
     this.sock.on('data', function(data) {
 
-        //更新存活时间
+         //更新存活时间
         self.lastAlive  =   new Date();
 
-            buffer.append(data);
-            buffer.readData(function(buff,type){
-                if(config.LogOn)
-                {
-                    log(self.headlog() +'broadcast data: ' + opId + ' size:' + buff.length + " data:" + buff);
-                }
-                if(syncAll && type==2)
-                {
-                    //不广播模板数据
-                    return;
-                }
-                //转发完整包
-                var outbuffer = new ByteRequest();
-                //写入原始数据
-                outbuffer.writeRaw(buff,type);
-                //广播频道消息
-                self.broadcast(outbuffer.buffer);
-            });
+        buffer.append(data);
+        buffer.readData(function(buff,type){
+            if(config.LogOn)
+            {
+                log(self.headlog() +'broadcast data: ' + opId + ' size:' + buff.length + " data:" + buff);
+            }
+            if(syncAll && type==2 )
+            {
+                //不广播模板数据
+                return;
+            }
+            //转发完整包
+            var outbuffer = new ByteRequest();
+            //写入原始数据
+            outbuffer.writeRaw(buff,type);
+            //广播频道消息
+            self.broadcast(outbuffer.buffer);
+        });
 
     });
 

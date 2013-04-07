@@ -34,7 +34,7 @@ setInterval(function(){
         {
             var sc= (new Date().getTime()- channel.lastAlive.getTime())/1000;
 
-            if(sc>config.AliveSecond)
+            if(sc>config.AliveSecond && channel.count() <=0 )
             {
 
                 channel.close();
