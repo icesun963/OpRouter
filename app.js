@@ -122,8 +122,12 @@ net.createServer(function(sock) {
 
     Router.add(client);
 
-    client.onLeaverChannel(function(channel,syncchannel){
+    client.onClose(function(){
         Router.remove(client);
+    });
+
+    client.onLeaverChannel(function(channel,syncchannel){
+
         if(channel && channel.count()==0)
         {
              channel.close();

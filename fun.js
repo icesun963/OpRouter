@@ -75,6 +75,10 @@ Client = function(sock)
         this.onLeaverChannel_CallBack=callback;
     };
 
+    this.onClose=function(callback){
+        this.onClose_CallBack=callback;
+    };
+
 
     this.send=function(data){
         var outbuff= new ByteRequest();
@@ -94,6 +98,8 @@ Client = function(sock)
         this.leaveChannel();
         this.sock.destroy();
 
+        if(this.onClose_CallBack)
+            this.onClose_CallBack(this);
     };
 
     this.leaveChannel=function()
