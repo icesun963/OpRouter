@@ -126,6 +126,16 @@ net.createServer(function(sock) {
         Router.remove(client);
     });
 
+    client.onLeaverChannel(function(ch1,ch2){
+       if(ch1 && ch1.size()==0)
+       {
+           ch1.close();
+       }
+        if(ch2 && ch2.size()==0)
+        {
+            ch2.close();
+        }
+    });
 
     // 为这个socket实例添加一个"close"事件处理函数
     sock.on('close', function(data) {
