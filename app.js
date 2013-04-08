@@ -127,11 +127,11 @@ net.createServer(function(sock) {
     });
 
     client.onLeaverChannel(function(ch1,ch2){
-       if(ch1 && ch1.size()==0)
+       if(ch1 && ch1.count()==0)
        {
            ch1.close();
        }
-        if(ch2 && ch2.size()==0)
+        if(ch2 && ch2.count()==0)
         {
             ch2.close();
         }
