@@ -17,7 +17,7 @@ var Channels = new Hashtable();
 //完整数据广播频道
 var SyncChannels = new Hashtable();
 
-
+/*
 //检查存活频道
 setInterval(function(){
 
@@ -61,7 +61,7 @@ setInterval(function(){
     if(remove)
         log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
 },1 * 1000);
-
+*/
 
 //如果没有任何连接,重启服务
 setInterval(function(){
@@ -132,7 +132,6 @@ net.createServer(function(sock) {
         {
              channel.close();
              Channels.remove(channel.opid);
-
              log('--Remove Channel Count:' + SyncChannels.size()  + "/" + Channels.size());
 
         }
@@ -140,8 +139,7 @@ net.createServer(function(sock) {
         {
              syncchannel.close();
              SyncChannels.remove(syncchannel.opid);
-
-            log('--Remove SyncChannel Count:' + SyncChannels.size()  + "/" + Channels.size());
+             log('--Remove SyncChannel Count:' + SyncChannels.size()  + "/" + Channels.size());
         }
     });
 
