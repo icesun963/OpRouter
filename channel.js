@@ -21,7 +21,7 @@ Channel = function (opId,syncAll)
     var self = this;
 
     this.timeOut=function(){
-        var sc= (new Date().getTime()- this.lastAlive.getTime())/1000;
+        var sc= (new Date().getTime()- self.lastAlive.getTime())/1000;
         if(sc>config.AliveSecond)
         {
             return true;
@@ -38,12 +38,12 @@ Channel = function (opId,syncAll)
         if(this.find(tclient)==-1)
         {
             this.list.push( tclient );
-            log(self.headlog() + 'channel[] sock add' );
+            log(self.headlog() + 'Channel[] sock add' );
             //最大在线人数
             if( this.list.length > this.maxcount ) {
                 this.maxcount = this.list.length;
             }
-            log(self.headlog() + 'channel['+ opId +'] sock count:' + this.list.length
+            log(self.headlog() + 'Channel['+ opId +'] sock count:' + this.list.length
                 + ', maxcount:' + this.maxcount  );
         }
 
@@ -71,7 +71,7 @@ Channel = function (opId,syncAll)
         if( idx != -1 ) {
             this.list.splice( idx, 1 ); //列表中删除一个元素
         }
-        log('--' + this.headlog() + 'sock['+ opId +'] remove, count=' + this.count() );
+        log('--' + this.headlog() + 'Channel sock['+ opId +'] remove, count=' + this.count() );
     }
     //客户端个数
     this.count = function() {
@@ -136,8 +136,10 @@ Channel = function (opId,syncAll)
                 client.leaveChannel();
         }
         this.sock.destroy();
+        log('--' + self.headlog() + 'Channel close:' + this.opid)
         if(this.onClose_CallBack)
             this.onClose_CallBack(this.opid);
+
     }
 
     //客户端连接相关
@@ -150,7 +152,7 @@ Channel = function (opId,syncAll)
         outbuff.writeData(msg);
         this.sock.write(outbuff.buffer);
         //更新存活时间
-        this.lastAlive  =   new Date();
+        self.lastAlive  =   new Date();
     };
 
     this.headlog = function(){

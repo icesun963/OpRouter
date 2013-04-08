@@ -107,12 +107,12 @@ Client = function(sock)
         if(this.channel!=null)
         {
             this.channel.remove(this);
-            log('[' + this.clientId +']Remove From Channel:' + this.channel.opid);
+            log('Client[' + this.clientId +']Remove From Channel:' + this.channel.opid);
         }
         if(this.syncchannel!=null)
         {
             this.syncchannel.remove(this);
-            log('[' + this.clientId +']Remove From SyncChannel:' + this.syncchannel.opid);
+            log('Client[' + this.clientId +']Remove From SyncChannel:' + this.syncchannel.opid);
         }
 
 
@@ -120,6 +120,7 @@ Client = function(sock)
 
         if(this.onLeaverChannel_CallBack)
             this.onLeaverChannel_CallBack(this.channel,this.syncchannel);
+
         this.channel=null;
         this.syncchannel=null;
     }

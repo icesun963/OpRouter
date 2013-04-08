@@ -77,6 +77,7 @@ RouterChannel = function()
                 subclient.close();
         }
         client.close()
+
     }
 
     //客户端连接相关

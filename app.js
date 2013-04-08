@@ -17,7 +17,7 @@ var Channels = new Hashtable();
 //完整数据广播频道
 var SyncChannels = new Hashtable();
 
-/*
+
 //检查存活频道
 setInterval(function(){
 
@@ -36,7 +36,7 @@ setInterval(function(){
             {
                 channel.close();
                 Channels.remove(key);
-                log('--Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
+                log('-*-Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
             }
         }
@@ -52,7 +52,7 @@ setInterval(function(){
             {
                 channel.close();
                 SyncChannels.remove(key);
-                log('--Remove SyncChannel:' + key);
+                log('-*-Remove SyncChannel:' + key);
                 remove = true;
             }
         }
@@ -60,8 +60,8 @@ setInterval(function(){
 
     if(remove)
         log('App Channel Count:' + skeys.length +'/' + keys.length + '->'+ SyncChannels.size()  + "/" + Channels.size());
-},1 * 1000);
-*/
+},60 * 1000);
+
 
 //如果没有任何连接,重启服务
 setInterval(function(){
@@ -127,10 +127,10 @@ net.createServer(function(sock) {
     });
 
     client.onLeaverChannel(function(ch1,ch2){
-       if(ch1 && ch1.count()==0)
-       {
+        if(ch1 && ch1.count()==0)
+        {
            ch1.close();
-       }
+        }
         if(ch2 && ch2.count()==0)
         {
             ch2.close();
@@ -196,12 +196,13 @@ net.createServer(function(sock) {
 
                         if(!Channels.containsKey(opid))
                         {
-                            if(config.LogOn)
-                                log('+Creat Channel:' + opid);
+
+                            log('+Creat Channel:' + opid);
 
                             channel = new Channel(opid,false);
                             channel.onClose(function(copid){
                                 Channels.remove(copid);
+                                log('-*-Channel Remove:' + copid + ' Count:' + Channels.size());
                             });
                             Channels.put(opid,channel);
 
@@ -224,6 +225,7 @@ net.createServer(function(sock) {
                                 SyncChannels.put(opid,syncchannel);
                                 syncchannel.onClose(function(copid){
                                     SyncChannels.remove(copid);
+                                    log('-*-SyncChannel Remove:' + copid + ' Count:' + Channels.size());
                                 });
                             }
                             if(!syncchannel)
