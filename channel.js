@@ -29,6 +29,10 @@ Channel = function (opId,syncAll)
         return false;
     }
 
+    this.onClose=function(callback){
+        this.onClose_CallBack=callback;
+    };
+
     //加入客户端列表
     this.add = function( tclient ) {
         if(this.find(tclient)==-1)
@@ -132,6 +136,8 @@ Channel = function (opId,syncAll)
                 client.leaveChannel();
         }
         this.sock.destroy();
+        if(this.onClose_CallBack)
+            this.onClose_CallBack(this.opid);
     }
 
     //客户端连接相关

@@ -126,22 +126,6 @@ net.createServer(function(sock) {
         Router.remove(client);
     });
 
-    client.onLeaverChannel(function(channel,syncchannel){
-
-        if(channel && channel.count()==0)
-        {
-             channel.close();
-             Channels.remove(channel.opid);
-             log('--Remove Channel Count:' + SyncChannels.size()  + "/" + Channels.size());
-
-        }
-        if(syncchannel && syncchannel.count()==0)
-        {
-             syncchannel.close();
-             SyncChannels.remove(syncchannel.opid);
-             log('--Remove SyncChannel Count:' + SyncChannels.size()  + "/" + Channels.size());
-        }
-    });
 
     // 为这个socket实例添加一个"close"事件处理函数
     sock.on('close', function(data) {
@@ -206,6 +190,9 @@ net.createServer(function(sock) {
                                 log('+Creat Channel:' + opid);
 
                             channel = new Channel(opid,false);
+                            channel.onClose(function(copid){
+                                Channels.remove(copid);
+                            });
                             Channels.put(opid,channel);
 
                             //初始连接用户,会收到Sync命令
@@ -225,6 +212,9 @@ net.createServer(function(sock) {
                                 log('+Creat Syncchannel:' + opid);
                                 syncchannel = new Channel(opid,true);
                                 SyncChannels.put(opid,syncchannel);
+                                syncchannel.onClose(function(copid){
+                                    SyncChannels.remove(copid);
+                                });
                             }
                             if(!syncchannel)
                             {

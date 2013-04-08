@@ -4,10 +4,10 @@
     <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="" />
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365385721442" ignored="false" />
+    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365409629886" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364960584928" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365339007757" ignored="false" />
-    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365338466806" ignored="false" />
+    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365409579334" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364962194342" ignored="false" />
     <file path="/config.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363447011502" ignored="false" />
@@ -44,7 +44,16 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="13" selection-start="3252" selection-end="3252" vertical-scroll-proportion="1.1875">
+            <state line="215" column="48" selection-start="5452" selection-end="5452" vertical-scroll-proportion="0.6961207">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fun.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fun.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="0" selection-start="1948" selection-end="2031" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -53,7 +62,7 @@
       <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="9" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
+            <state line="137" column="30" selection-start="3566" selection-end="3566" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -545,7 +554,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39365917" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32760897" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35138705" sideWeight="0.91964996" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35138705" sideWeight="0.91964996" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262195" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -686,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fun.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="33" selection-start="2382" selection-end="2382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="16" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
@@ -707,16 +709,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fun.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="1948" selection-end="2031" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
+        <state line="137" column="30" selection-start="3566" selection-end="3566" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="13" selection-start="3252" selection-end="3252" vertical-scroll-proportion="1.1875">
+        <state line="215" column="48" selection-start="5452" selection-end="5452" vertical-scroll-proportion="0.6961207">
           <folding />
         </state>
       </provider>
