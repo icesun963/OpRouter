@@ -67,7 +67,7 @@ setInterval(function(){
 setInterval(function(){
     log("RouterUser:" + Router.count());
     if(config.AutoExitOnNoClient)
-        if(Router.count()==0)
+        if(Router.count()==0 || Channels.size()==0)
         {
             process.exit();
         }
