@@ -136,9 +136,7 @@ Channel = function (opId,syncAll)
                 client.leaveChannel();
         }
         this.sock.destroy();
-        log('--' + self.headlog() + 'Channel close:' + this.opid)
-        if(this.onClose_CallBack)
-            this.onClose_CallBack(this.opid);
+
 
     }
 
@@ -217,8 +215,10 @@ Channel = function (opId,syncAll)
 
     // 为客户端添加“close”事件处理函数
     this.sock.on('close', function() {
-        log(self.headlog() +'Connection closed:' + opId);
-        self.close();
+        log(self.headlog() +'Connection closed:' + self.opId);
+        log('--' + self.headlog() + 'Channel close:' + self.opid)
+        if(self.onClose_CallBack)
+            self.onClose_CallBack(self.opid);
     });
 
 }

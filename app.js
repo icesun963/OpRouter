@@ -32,7 +32,9 @@ setInterval(function(){
         var channel = Channels.get(key);
         if(channel)
         {
-            if(channel.timeOut() && channel.count() <=0 )
+            if(
+                //channel.timeOut() &&
+                channel.count() <=0 )
             {
                 channel.close();
                 Channels.remove(key);
@@ -202,7 +204,7 @@ net.createServer(function(sock) {
                             channel = new Channel(opid,false);
                             channel.onClose(function(copid){
                                 Channels.remove(copid);
-                                log('-*-Channel Remove:' + copid + ' Count:' + Channels.size());
+                                log('-*-Channel Remove OnClose:' + copid + ' Count:' + Channels.size());
                             });
                             Channels.put(opid,channel);
 
@@ -225,7 +227,7 @@ net.createServer(function(sock) {
                                 SyncChannels.put(opid,syncchannel);
                                 syncchannel.onClose(function(copid){
                                     SyncChannels.remove(copid);
-                                    log('-*-SyncChannel Remove:' + copid + ' Count:' + Channels.size());
+                                    log('-*-SyncChannel Remove OnClose:' + copid + ' Count:' + Channels.size());
                                 });
                             }
                             if(!syncchannel)
