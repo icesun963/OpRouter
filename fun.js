@@ -104,12 +104,12 @@ Client = function(sock)
 
     this.leaveChannel=function()
     {
-        if(this.channel!=null)
+        if(this.channel)
         {
             this.channel.remove(this);
             log('Client[' + this.clientId +']Remove From Channel:' + this.channel.opid);
         }
-        if(this.syncchannel!=null)
+        if(this.syncchannel)
         {
             this.syncchannel.remove(this);
             log('Client[' + this.clientId +']Remove From SyncChannel:' + this.syncchannel.opid);

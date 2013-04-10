@@ -49,10 +49,18 @@ Channel = function (opId,syncAll)
 
         if(this.syncAll)
         {
+            if(tclient.syncchannel)
+            {
+                tclient.syncchannel.remove(tclient);
+            }
             tclient.syncchannel=this;
         }
         else
         {
+            if(tclient.channel)
+            {
+                tclient.channel.remove(tclient);
+            }
             tclient.channel=this;
         }
 
