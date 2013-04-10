@@ -32,11 +32,11 @@ setInterval(function(){
         var channel = Channels.get(key);
         if(channel)
         {
-            if(
-                //channel.timeOut() &&
-                channel.count() <=0 )
+            if(channel.timeOut()
+                //&& channel.count() <=0
+                )
             {
-                channel.close();
+                //channel.close();
                 Channels.remove(key);
                 log('-*-Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
@@ -52,7 +52,7 @@ setInterval(function(){
             var channel = SyncChannels.get(key);
             if(channel )
             {
-                channel.close();
+                //channel.close();
                 SyncChannels.remove(key);
                 log('-*-Remove SyncChannel:' + key);
                 remove = true;
