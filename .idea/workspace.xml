@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c5f39380-62b6-41f4-8ef1-54dbc5a69054" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fun.js" afterPath="$PROJECT_DIR$/fun.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686410498" ignored="false" />
-    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365687212842" ignored="false" />
+    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365695462309" ignored="false" />
+    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365695775646" ignored="false" />
     <file path="/channel.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686037898" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,19 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/channel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="546" selection-end="553" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="28" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.7444169">
+            <state line="66" column="41" selection-start="1506" selection-end="1506" vertical-scroll-proportion="1.3834951">
               <folding />
             </state>
           </provider>
@@ -50,25 +42,7 @@
       <file leaf-file-name="fun.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fun.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="0" selection-start="3584" selection-end="3584" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="30" selection-start="140" selection-end="140" vertical-scroll-proportion="-3.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sysmon/core.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="43" selection-start="4855" selection-end="4869" vertical-scroll-proportion="0.0">
+            <state line="353" column="42" selection-start="9111" selection-end="9111" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,15 +69,16 @@
         <option value="$PROJECT_DIR$/sysmon/core.js" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/channel.js" />
+        <option value="$PROJECT_DIR$/fun.js" />
         <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
+    <option name="x" value="114" />
     <option name="y" value="22" />
-    <option name="width" value="1260" />
-    <option name="height" value="760" />
+    <option name="width" value="1280" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -175,8 +150,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.js" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.js" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -260,7 +235,11 @@
       <created>1365686414876</created>
       <updated>1365686414876</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update 4.0">
+      <created>1365687220243</created>
+      <updated>1365687220243</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -284,23 +263,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="22" width="1260" height="760" extended-state="0" />
+    <frame x="114" y="22" width="1280" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497979" sideWeight="0.6713396" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24582338" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39875388" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32866043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -367,29 +346,25 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/app.js</url>
-          <line>226</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Caches/WebStorm6/extLibs/nodejs-v0.10.0-src/core-modules-sources/lib/module.js">
+    <entry file="file://$PROJECT_DIR$/sysmon/core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="14" selection-start="9525" selection-end="9525" vertical-scroll-proportion="0.3325062">
+        <state line="152" column="43" selection-start="4855" selection-end="4869" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/WebStorm6/extLibs/nodejs-v0.10.0-src/core-modules-sources/lib/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="337" column="14" selection-start="9525" selection-end="9525" vertical-scroll-proportion="0.3325062" />
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/WebStorm6/extLibs/nodejs-v0.10.0-src/core-modules-sources/lib/net.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="862" column="10" selection-start="21955" selection-end="21955" vertical-scroll-proportion="0.3325062">
-          <folding />
-        </state>
+        <state line="862" column="10" selection-start="21955" selection-end="21955" vertical-scroll-proportion="0.3325062" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client.js">
@@ -450,35 +425,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="140" selection-end="140" vertical-scroll-proportion="-3.75">
+        <state line="6" column="30" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Library/Caches/WebStorm6/extLibs/nodejs-v0.10.0-src/core-modules-sources/lib/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="0" selection-start="3877" selection-end="3877" vertical-scroll-proportion="4.1899443">
+        <state line="119" column="0" selection-start="3877" selection-end="3877" vertical-scroll-proportion="4.1899443" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="4" selection-start="434" selection-end="434" vertical-scroll-proportion="0.33252427">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fun.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="0" selection-start="3584" selection-end="3584" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/channel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="546" selection-end="553" vertical-scroll-proportion="0.0">
+        <state line="353" column="42" selection-start="9111" selection-end="9111" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="28" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.7444169">
+        <state line="66" column="41" selection-start="1506" selection-end="1506" vertical-scroll-proportion="1.3834951">
           <folding />
         </state>
       </provider>

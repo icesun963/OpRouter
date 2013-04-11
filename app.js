@@ -37,9 +37,14 @@ setInterval(function(){
             {
                 //channel.close();
                 Channels.remove(key);
+                Channels.remove(channel.opId);
                 log('-*-Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
             }
+        }
+        else
+        {
+            Channels.remove(key);
         }
     }
 
@@ -48,13 +53,18 @@ setInterval(function(){
         var key =  skeys[i];
         if(!Channels.containsKey(key))
         {
-            var channel = SyncChannels.get(key);
-            if(channel )
+            var syncchannel = SyncChannels.get(key);
+            if(syncchannel )
             {
                 //channel.close();
                 SyncChannels.remove(key);
+                SyncChannels.remove(syncchannel.opId);
                 log('-*-Remove SyncChannel:' + key);
                 remove = true;
+            }
+            else
+            {
+                SyncChannels.remove(key);
             }
         }
     }
@@ -98,11 +108,12 @@ getChannelList = function(){
         {
             ret.push({
                 'Key' : key,
+                'Opid'  : channel.opId,
                 'Closed' : channel.Closed,
                 'AddTime' : channel.addTime,
                 'LastLive': channel.lastAlive,
-                'Count' : channel.count(),
-                'Opid'  : channel.opId
+                'Count' : channel.count()
+
             });
         }
     }

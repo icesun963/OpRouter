@@ -351,9 +351,7 @@ Hashtable =function (){
         var result = '';
         for (var i in this.hashtable)
         {
-            if (this.hashtable[i] != null
-                //&& i !=classkey
-                )
+            if (this.hashtable[i] != null )
                 result += '{' + i + '},{' + this.hashtable[i] + '}/n';
         }
         return result;
