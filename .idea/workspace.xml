@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5f39380-62b6-41f4-8ef1-54dbc5a69054" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/channel.js" afterPath="$PROJECT_DIR$/channel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365685485663" ignored="false" />
-    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365685468653" ignored="false" />
+    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686122397" ignored="false" />
+    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686096666" ignored="false" />
     <file path="/channel.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686037898" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +40,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="43" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.2580645">
+            <state line="94" column="17" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.36972705">
               <folding />
             </state>
           </provider>
@@ -245,7 +243,15 @@
       <created>1365685492369</created>
       <updated>1365685492369</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1365686050722</created>
+      <updated>1365686050722</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <created>1365686126471</created>
+      <updated>1365686126471</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -462,7 +468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="43" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.2580645">
+        <state line="94" column="17" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.36972705">
           <folding />
         </state>
       </provider>
