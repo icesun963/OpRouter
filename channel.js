@@ -15,9 +15,9 @@ Channel = function (id,syncAll)
     this.list       = [];   //存放所有客户端TClient个体对象
     this.maxcount   = 0;    //历史最大客户端数量
     this.opId       = id;
-    this.syncAll       = syncAll;
+    this.syncAll       =    syncAll;
     this.lastAlive  =   new Date();//最后更新时间
-
+    this.Closed     =   false;
     var self = this;
 
     this.timeOut=function(){
@@ -143,9 +143,8 @@ Channel = function (id,syncAll)
             if(client)
                 client.leaveChannel();
         }
-        this.sock.destroy();
-
-
+        if(!self.Closed)
+            this.sock.destroy();
     }
 
     //客户端连接相关
@@ -227,7 +226,8 @@ Channel = function (id,syncAll)
         log('--' + self.headlog() + 'Channel close:' + self.opId)
         if(self.onClose_CallBack)
             self.onClose_CallBack(self.opId);
-
+        self.Closed=true;
+        close();
     });
 
 }
