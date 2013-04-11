@@ -43,7 +43,7 @@ Channel = function (id,syncAll)
             if( this.list.length > this.maxcount ) {
                 this.maxcount = this.list.length;
             }
-            log(self.headlog() + 'Channel['+ opId +'] sock count:' + this.list.length
+            log(self.headlog() + 'Channel['+ self.opId +'] sock count:' + this.list.length
                 + ', maxcount:' + this.maxcount  );
         }
 
