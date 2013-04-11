@@ -17,6 +17,7 @@ Channel = function (id,syncAll)
     this.opId       = id;
     this.syncAll       =    syncAll;
     this.lastAlive  =   new Date();//最后更新时间
+    this.addTime    =   new Data();
     this.Closed     =   false;
     var self = this;
 

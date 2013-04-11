@@ -85,6 +85,27 @@ getNowUser = function(){
     };
 };
 
+getChannelList = function(){
+    var ret = [];
+    var keys=Channels.keys();
+
+    for(var i=0 ;i<keys.length; i++)
+    {
+        var key=       keys[i];
+        var channel = Channels.get(key);
+        if(channel)
+        {
+            ret.pop({
+                'Closed' : channel.Closed,
+                'AddTime' : channel.addTime,
+                'LastLive': channel.lastAlive,
+                'Count' : channel.count(),
+                'Opid'  : channel.opId
+            });
+        }
+    }
+    return ret;
+}
 //全同步参数
 Router.onDataCallBack(function(data,type){
     if(type != 0)
