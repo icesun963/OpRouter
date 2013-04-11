@@ -7,8 +7,8 @@
     </list>
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686210744" ignored="false" />
-    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686398275" ignored="false" />
+    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686410498" ignored="false" />
+    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365687212842" ignored="false" />
     <file path="/channel.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686037898" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +41,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="39" selection-start="634" selection-end="634" vertical-scroll-proportion="0.81885856">
+            <state line="99" column="28" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.7444169">
               <folding />
             </state>
           </provider>
@@ -256,7 +256,11 @@
       <created>1365686213604</created>
       <updated>1365686213604</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update 4.0">
+      <created>1365686414876</created>
+      <updated>1365686414876</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -366,7 +370,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app.js</url>
-          <line>223</line>
+          <line>226</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -474,7 +478,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="39" selection-start="634" selection-end="634" vertical-scroll-proportion="0.81885856">
+        <state line="99" column="28" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.7444169">
           <folding />
         </state>
       </provider>

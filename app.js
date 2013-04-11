@@ -97,6 +97,7 @@ getChannelList = function(){
         if(channel)
         {
             ret.push({
+                'Key' : key,
                 'Closed' : channel.Closed,
                 'AddTime' : channel.addTime,
                 'LastLive': channel.lastAlive,
