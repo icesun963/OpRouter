@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5f39380-62b6-41f4-8ef1-54dbc5a69054" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686122397" ignored="false" />
-    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686096666" ignored="false" />
+    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686210744" ignored="false" />
+    <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686398275" ignored="false" />
     <file path="/channel.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1365686037898" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +41,7 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="17" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.36972705">
+            <state line="35" column="39" selection-start="634" selection-end="634" vertical-scroll-proportion="0.81885856">
               <folding />
             </state>
           </provider>
@@ -251,7 +252,11 @@
       <created>1365686126471</created>
       <updated>1365686126471</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update 4.0">
+      <created>1365686213604</created>
+      <updated>1365686213604</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -339,7 +344,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 4.0" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -354,13 +359,14 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="update" />
+    <MESSAGE value="update 4.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app.js</url>
-          <line>222</line>
+          <line>223</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -468,7 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="17" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.36972705">
+        <state line="35" column="39" selection-start="634" selection-end="634" vertical-scroll-proportion="0.81885856">
           <folding />
         </state>
       </provider>

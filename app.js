@@ -30,9 +30,10 @@ setInterval(function(){
     {
         var key=       keys[i];
         var channel = Channels.get(key);
+
         if(channel)
         {
-            if( channel.Closed )
+            if( channel.Closed == true  )
             {
                 //channel.close();
                 Channels.remove(key);
