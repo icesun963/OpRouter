@@ -36,7 +36,7 @@ setInterval(function(){
                 //channel.timeOut() &&
                 channel.count() <=0 )
             {
-                channel.close();
+                //channel.close();
                 Channels.remove(key);
                 log('-*-Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
@@ -52,7 +52,7 @@ setInterval(function(){
             var channel = SyncChannels.get(key);
             if(channel )
             {
-                channel.close();
+                //channel.close();
                 SyncChannels.remove(key);
                 log('-*-Remove SyncChannel:' + key);
                 remove = true;
@@ -185,7 +185,7 @@ net.createServer(function(sock) {
 
                         client.leaveChannel();
 
-                        var opid = data.args[0];
+                        var opid = data.args[0].toString();
 
                         if(config.LogOn)
                             log('Sync Cmd Get:' + opid);
@@ -203,7 +203,7 @@ net.createServer(function(sock) {
 
                             channel = new Channel(opid,false);
                             channel.onClose(function(copid){
-                                Channels.remove(copid);
+                                Channels.remove(copid.toString());
                                 log('-*-Channel Remove OnClose:' + copid + ' Count:' + Channels.size());
                             });
                             Channels.put(opid,channel);
