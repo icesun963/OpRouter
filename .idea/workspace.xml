@@ -7,7 +7,7 @@
     <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365663794871" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364960584928" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365339007757" ignored="false" />
-    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365665281993" ignored="false" />
+    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365665401663" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365426883421" ignored="false" />
     <file path="/config.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363447011502" ignored="false" />
@@ -45,7 +45,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="27" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
+            <state line="231" column="26" selection-start="5986" selection-end="5986" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,19 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="106" selection-start="140" selection-end="140" vertical-scroll-proportion="0.2489083">
+            <state line="6" column="106" selection-start="140" selection-end="140" vertical-scroll-proportion="-4.071429">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="23" selection-start="5018" selection-end="5018" vertical-scroll-proportion="-18.44">
+            <state line="229" column="23" selection-start="5907" selection-end="5907" vertical-scroll-proportion="0.34056398">
               <folding />
             </state>
           </provider>
@@ -113,8 +113,8 @@
         <option value="$PROJECT_DIR$/fun.js" />
         <option value="$PROJECT_DIR$/sysmon/core.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/channel.js" />
         <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/channel.js" />
       </list>
     </option>
   </component>
@@ -745,23 +745,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="106" selection-start="140" selection-end="140" vertical-scroll-proportion="-4.071429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="27" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
+        <state line="231" column="26" selection-start="5986" selection-end="5986" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="23" selection-start="5018" selection-end="5018" vertical-scroll-proportion="-18.44">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="106" selection-start="140" selection-end="140" vertical-scroll-proportion="0.2489083">
+        <state line="229" column="23" selection-start="5907" selection-end="5907" vertical-scroll-proportion="0.34056398">
           <folding />
         </state>
       </provider>

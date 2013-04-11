@@ -229,7 +229,7 @@ Channel = function (id,syncAll)
         log(self.headlog() +'Connection closed:' + self.opId);
         log('--' + self.headlog() + 'Channel close:' + self.opId)
         self.Closed=true;
-        close();
+        self.close();
     });
 
 }
