@@ -1,5 +1,5 @@
 {
-    "Version": "0.3.6",
+    "Version": "0.3.7",
     "ServerPort" : 8066,
 
     "ClientHost": "10.241.35.5",
@@ -7,7 +7,7 @@
     "SyncHost" : "10.241.35.5",
     "SyncPort" : 8066,
 
-    "AliveSecond": 300  ,
+    "AliveSecond": 120  ,
     "DataDumpOn" : false,
     "LogOn" : false,
     "AutoExitOnNoClient" : true ,
