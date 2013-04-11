@@ -95,7 +95,7 @@ getChannelList = function(){
         var channel = Channels.get(key);
         if(channel)
         {
-            ret.pop({
+            ret.push({
                 'Closed' : channel.Closed,
                 'AddTime' : channel.addTime,
                 'LastLive': channel.lastAlive,
