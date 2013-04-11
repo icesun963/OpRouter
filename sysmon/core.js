@@ -149,6 +149,9 @@ exports.start_server = function(port){
                    render_json(data, res);
                }, num);
             break;
+            case '/clist' :
+                 render_json(getChannelList(),res);
+                 break;
             case '/upuser' :
                 try
                 {
