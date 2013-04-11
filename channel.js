@@ -145,6 +145,9 @@ Channel = function (id,syncAll)
         }
         if(!self.Closed)
             this.sock.destroy();
+
+        if(self.onClose_CallBack)
+            self.onClose_CallBack(self.opId);
     }
 
     //客户端连接相关
@@ -189,6 +192,7 @@ Channel = function (id,syncAll)
 
     this.sock.on('error', function (err) {
         log(self.headlog() + ' channel OnError:' + err  + ' opId:' + self.opId);
+        self.close();
     });
 
 
@@ -224,8 +228,6 @@ Channel = function (id,syncAll)
     this.sock.on('close', function() {
         log(self.headlog() +'Connection closed:' + self.opId);
         log('--' + self.headlog() + 'Channel close:' + self.opId)
-        if(self.onClose_CallBack)
-            self.onClose_CallBack(self.opId);
         self.Closed=true;
         close();
     });

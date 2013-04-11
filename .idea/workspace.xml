@@ -7,7 +7,7 @@
     <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365663794871" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364960584928" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365339007757" ignored="false" />
-    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365665132818" ignored="false" />
+    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365665281993" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365426883421" ignored="false" />
     <file path="/config.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363447011502" ignored="false" />
@@ -60,19 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.6785714">
+            <state line="6" column="106" selection-start="140" selection-end="140" vertical-scroll-proportion="0.2489083">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="40" selection-start="305" selection-end="305" vertical-scroll-proportion="0.34056398">
+            <state line="194" column="23" selection-start="5018" selection-end="5018" vertical-scroll-proportion="-18.44">
               <folding />
             </state>
           </provider>
@@ -112,9 +112,9 @@
         <option value="$PROJECT_DIR$/routerChannel.js" />
         <option value="$PROJECT_DIR$/fun.js" />
         <option value="$PROJECT_DIR$/sysmon/core.js" />
-        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/channel.js" />
+        <option value="$PROJECT_DIR$/config.json" />
       </list>
     </option>
   </component>
@@ -738,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.6785714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fun.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="2" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
@@ -761,7 +754,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/channel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="305" selection-end="305" vertical-scroll-proportion="0.34056398">
+        <state line="194" column="23" selection-start="5018" selection-end="5018" vertical-scroll-proportion="-18.44">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="106" selection-start="140" selection-end="140" vertical-scroll-proportion="0.2489083">
           <folding />
         </state>
       </provider>
