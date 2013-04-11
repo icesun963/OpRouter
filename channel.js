@@ -189,8 +189,7 @@ Channel = function (opId,syncAll)
     });
 
     this.sock.on('error', function (err) {
-        log(self.headlog() + 'channel sock error:' + err  + ' Opid:' + opId);
-        //self.close();
+        log(self.headlog() + err  + ' Opid:' + opId);
     });
 
 
@@ -228,7 +227,6 @@ Channel = function (opId,syncAll)
         log('--' + self.headlog() + 'Channel close:' + self.opid)
         if(self.onClose_CallBack)
             self.onClose_CallBack(self.opid);
-        self.Closed = true;
     });
 
 }

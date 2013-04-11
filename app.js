@@ -32,9 +32,11 @@ setInterval(function(){
         var channel = Channels.get(key);
         if(channel)
         {
-            if(channel.Closed )
+            if(
+                //channel.timeOut() &&
+                channel.count() <=0 )
             {
-                //channel.close();
+                channel.close();
                 Channels.remove(key);
                 log('-*-Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
@@ -50,7 +52,7 @@ setInterval(function(){
             var channel = SyncChannels.get(key);
             if(channel )
             {
-                //channel.close();
+                channel.close();
                 SyncChannels.remove(key);
                 log('-*-Remove SyncChannel:' + key);
                 remove = true;
@@ -84,28 +86,6 @@ getNowUser = function(){
         'SyncChannelCount' : SyncChannels.size()
     };
 };
-
-getChannelList = function(){
-   var ret = [];
-    var keys=Channels.keys();
-
-    for(var i=0 ;i<keys.length; i++)
-    {
-        var key=       keys[i];
-        var channel = Channels.get(key);
-        if(channel)
-        {
-            ret.push({
-                'OpId':channel.opid,
-                'LastLive': channel.lastAlive,
-                'Count': channel.count()  ,
-                'IsSync' : channel.syncAll,
-                'Closed': channel.Closed
-            });
-        }
-    }
-    return ret;
-} ;
 
 //全同步参数
 Router.onDataCallBack(function(data,type){
@@ -205,7 +185,7 @@ net.createServer(function(sock) {
 
                         client.leaveChannel();
 
-                        var opid = data.args[0].toString();
+                        var opid = data.args[0];
 
                         if(config.LogOn)
                             log('Sync Cmd Get:' + opid);
@@ -223,7 +203,7 @@ net.createServer(function(sock) {
 
                             channel = new Channel(opid,false);
                             channel.onClose(function(copid){
-                                Channels.remove(copid.toString());
+                                Channels.remove(copid);
                                 log('-*-Channel Remove OnClose:' + copid + ' Count:' + Channels.size());
                             });
                             Channels.put(opid,channel);
