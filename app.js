@@ -36,7 +36,6 @@ setInterval(function(){
             if( channel.Closed == true  )
             {
                 //channel.close();
-                Channels.remove(key);
                 Channels.remove(channel.opId);
                 log('-*-Remove Channel:' + key + " lastAlive:" +  channel.lastAlive);
                 remove = true;
@@ -57,7 +56,7 @@ setInterval(function(){
             if(syncchannel )
             {
                 //channel.close();
-                SyncChannels.remove(key);
+
                 SyncChannels.remove(syncchannel.opId);
                 log('-*-Remove SyncChannel:' + key);
                 remove = true;
@@ -238,7 +237,7 @@ net.createServer(function(sock) {
                                 Channels.remove(copid.toString());
                                 log('-*-Channel Remove OnClose:' + copid + ' Count:' + Channels.size());
                             });
-                            Channels.put(opid,channel);
+                            Channels.put(channel.opId,channel);
 
                             //初始连接用户,会收到Sync命令
                             client.syncd=true;
@@ -256,7 +255,7 @@ net.createServer(function(sock) {
                             {
                                 log('+Creat Syncchannel:' + opid);
                                 syncchannel = new Channel(opid,true);
-                                SyncChannels.put(opid,syncchannel);
+                                SyncChannels.put(syncchannel.opId,syncchannel);
                                 syncchannel.onClose(function(copid){
                                     SyncChannels.remove(copid);
                                     log('-*-SyncChannel Remove OnClose:' + copid + ' Count:' + Channels.size());
