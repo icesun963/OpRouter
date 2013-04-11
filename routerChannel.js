@@ -76,8 +76,6 @@ RouterChannel = function()
             if(subclient)
                 subclient.close();
         }
-        client.close()
-
     }
 
     //客户端连接相关
@@ -112,7 +110,9 @@ RouterChannel = function()
     sock.on('error', function (err) {
         log( 'error :' +  err  + 'On RouterChannel ');
         log('RouterChannel ReConnect...');
+
         reConnect();
+        self.close();
     });
 
 
