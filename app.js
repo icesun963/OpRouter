@@ -32,7 +32,7 @@ setInterval(function(){
         var channel = Channels.get(key);
         if(channel)
         {
-            if( channel.count() <=0 || channel.Closed )
+            if(channel.Closed )
             {
                 //channel.close();
                 Channels.remove(key);
