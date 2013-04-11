@@ -4,10 +4,10 @@
     <list default="true" id="7b2dfede-c7a2-4372-9fa3-5093922772a1" name="Default" comment="" />
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365656969337" ignored="false" />
+    <file path="/app.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365657128458" ignored="false" />
     <file path="/client.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364960584928" ignored="false" />
     <file path="/fun.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365339007757" ignored="false" />
-    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365656718106" ignored="false" />
+    <file path="/channel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365657722004" ignored="false" />
     <file path="/syncChannel.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363443954192" ignored="false" />
     <file path="/config.json" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365426883421" ignored="false" />
     <file path="/config.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1363447011502" ignored="false" />
@@ -22,6 +22,7 @@
     <file path="/app_runner.js" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1364738465830" ignored="false" />
     <file path="/Dummy.txt" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365655997632" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365645951763" ignored="false" />
+    <file path="/a.dummy" changelist="7b2dfede-c7a2-4372-9fa3-5093922772a1" time="1365657542697" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,19 +42,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="58" selection-start="4702" selection-end="4702" vertical-scroll-proportion="0.33333334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sysmon/core.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="50" selection-start="4876" selection-end="4876" vertical-scroll-proportion="0.0">
+            <state line="292" column="18" selection-start="7856" selection-end="7856" vertical-scroll-proportion="-5.36">
               <folding />
             </state>
           </provider>
@@ -62,25 +54,16 @@
       <file leaf-file-name="fun.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fun.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="44" selection-start="3132" selection-end="3132" vertical-scroll-proportion="0.0">
+            <state line="17" column="2" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.6785714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="channel.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="channel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/channel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="19" selection-start="5827" selection-end="5833" vertical-scroll-proportion="0.0">
+            <state line="192" column="21" selection-start="4848" selection-end="4848" vertical-scroll-proportion="0.46420825">
               <folding />
             </state>
           </provider>
@@ -120,9 +103,9 @@
         <option value="$PROJECT_DIR$/routerChannel.js" />
         <option value="$PROJECT_DIR$/fun.js" />
         <option value="$PROJECT_DIR$/sysmon/core.js" />
-        <option value="$PROJECT_DIR$/channel.js" />
-        <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/channel.js" />
       </list>
     </option>
   </component>
@@ -674,13 +657,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/channel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="35" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="12" selection-start="7" selection-end="14" vertical-scroll-proportion="0.0">
@@ -708,38 +684,9 @@
         <state line="14" column="63" selection-start="545" selection-end="545" vertical-scroll-proportion="0.24503312" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/policyServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="10" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="16" selection-start="2415" selection-end="2415" vertical-scroll-proportion="0.33152175" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareLib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="0" selection-start="6669" selection-end="6669" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routerChannel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="9" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.1656051">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/channel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="19" selection-start="5827" selection-end="5833" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sysmon/core.js">
@@ -749,23 +696,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fun.js">
+    <entry file="file://$PROJECT_DIR$/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="44" selection-start="3132" selection-end="3132" vertical-scroll-proportion="0.0">
+        <state line="16" column="16" selection-start="369" selection-end="369" vertical-scroll-proportion="0.24">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.6785714">
+        <state line="9" column="23" selection-start="188" selection-end="188" vertical-scroll-proportion="-6.107143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/policyServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="10" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routerChannel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="41" selection-start="3081" selection-end="3087" vertical-scroll-proportion="-6.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareLib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="256" column="0" selection-start="6669" selection-end="6669" vertical-scroll-proportion="0.24">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="58" selection-start="4702" selection-end="4702" vertical-scroll-proportion="0.33333334">
+        <state line="292" column="18" selection-start="7856" selection-end="7856" vertical-scroll-proportion="-5.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fun.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="2" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/channel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="21" selection-start="4848" selection-end="4848" vertical-scroll-proportion="0.46420825">
           <folding />
         </state>
       </provider>

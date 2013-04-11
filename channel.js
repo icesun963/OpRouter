@@ -189,7 +189,8 @@ Channel = function (opId,syncAll)
     });
 
     this.sock.on('error', function (err) {
-        log(self.headlog() + err  + ' Opid:' + opId);
+        log(self.headlog() + 'channel error:' + err  + ' Opid:' + opId);
+        self.close();
     });
 
 

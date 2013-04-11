@@ -225,7 +225,7 @@ net.createServer(function(sock) {
 
                             channel = new Channel(opid,false);
                             channel.onClose(function(copid){
-                                Channels.remove(copid);
+                                Channels.remove(copid.toString());
                                 log('-*-Channel Remove OnClose:' + copid + ' Count:' + Channels.size());
                             });
                             Channels.put(opid,channel);
