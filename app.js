@@ -100,7 +100,9 @@ getChannelList = function(){
             ret.push({
                 'OpId':channel.opid,
                 'LastLive': channel.lastAlive,
-                'Count': channel.count()
+                'Count': channel.count()  ,
+                'IsSync' : channel.syncAll,
+                'Closed': channel.Closed
             });
         }
     }

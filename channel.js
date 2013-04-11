@@ -227,6 +227,7 @@ Channel = function (opId,syncAll)
         log('--' + self.headlog() + 'Channel close:' + self.opid)
         if(self.onClose_CallBack)
             self.onClose_CallBack(self.opid);
+        self.Closed = true;
     });
 
 }
