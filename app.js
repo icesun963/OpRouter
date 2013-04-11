@@ -207,7 +207,7 @@ net.createServer(function(sock) {
 
                         client.leaveChannel();
 
-                        var opid = data.args[0];
+                        var opid = data.args[0].toString();
 
                         if(config.LogOn)
                             log('Sync Cmd Get:' + opid);
