@@ -32,9 +32,7 @@ setInterval(function(){
         var channel = Channels.get(key);
         if(channel)
         {
-            if(
-                //channel.timeOut() &&
-                channel.count() <=0 )
+            if( channel.Closed )
             {
                 //channel.close();
                 Channels.remove(key);

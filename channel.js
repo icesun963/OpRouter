@@ -7,14 +7,14 @@ var net = require('net');
 //===================================================================
 //差异消息频道
 //===================================================================
-Channel = function (opId,syncAll)
+Channel = function (id,syncAll)
 {
     var host = config.ClientHost;
     var port = config.ClientPort;
 
     this.list       = [];   //存放所有客户端TClient个体对象
     this.maxcount   = 0;    //历史最大客户端数量
-    this.opid       = opId;
+    this.opId       = id;
     this.syncAll       = syncAll;
     this.lastAlive  =   new Date();//最后更新时间
 
@@ -189,7 +189,7 @@ Channel = function (opId,syncAll)
     });
 
     this.sock.on('error', function (err) {
-        log(self.headlog() + ' channel OnError:' + err  + ' Opid:' + opId);
+        log(self.headlog() + ' channel OnError:' + err  + ' opId:' + opId);
     });
 
 
@@ -224,9 +224,10 @@ Channel = function (opId,syncAll)
     // 为客户端添加“close”事件处理函数
     this.sock.on('close', function() {
         log(self.headlog() +'Connection closed:' + self.opId);
-        log('--' + self.headlog() + 'Channel close:' + self.opid)
+        log('--' + self.headlog() + 'Channel close:' + self.opId)
         if(self.onClose_CallBack)
-            self.onClose_CallBack(self.opid);
+            self.onClose_CallBack(self.opId);
+
     });
 
 }
