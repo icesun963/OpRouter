@@ -79,7 +79,7 @@ Channel = function (id,syncAll)
         if( idx != -1 ) {
             this.list.splice( idx, 1 ); //列表中删除一个元素
         }
-        log('--' + this.headlog() + 'Channel sock['+ opId +'] remove, count=' + this.count() );
+        log('--' + this.headlog() + 'Channel sock['+ self.opId +'] remove, count=' + this.count() );
     }
     //客户端个数
     this.count = function() {
@@ -130,7 +130,7 @@ Channel = function (id,syncAll)
         //客户端数量
         if(config.LogOn)
         {
-            log(self.headlog() + 'broadcast to ['+ opId +'] ' + ccount + ' users' );
+            log(self.headlog() + 'broadcast to ['+ self.opId +'] ' + ccount + ' users' );
             log('=================================================');
         }
     }
@@ -172,14 +172,14 @@ Channel = function (id,syncAll)
     this.sock.connect(port, host, function() {
         this.setNoDelay(true);
 
-        log(self.headlog() + 'channel['+ opId +']  CONNECTED TO: ' + host + ':' + port);
+        log(self.headlog() + 'channel['+ self.opId +']  CONNECTED TO: ' + host + ':' + port);
 
         // 建立连接后立即向服务器发送数据，服务器将收到这些数据
 
         if(self.syncAll!=true)
         {
             //使用同步频道 或者切换频道
-            var data= { cmd : "Sync" , args : [opId] };
+            var data= { cmd : "Sync" , args : [self.opId] };
 
             var buff=new ByteRequest();
             buff.writeData(data);
@@ -189,7 +189,7 @@ Channel = function (id,syncAll)
     });
 
     this.sock.on('error', function (err) {
-        log(self.headlog() + ' channel OnError:' + err  + ' opId:' + opId);
+        log(self.headlog() + ' channel OnError:' + err  + ' opId:' + self.opId);
     });
 
 
@@ -204,7 +204,7 @@ Channel = function (id,syncAll)
         buffer.readData(function(buff,type){
             if(config.LogOn)
             {
-                log(self.headlog() +'broadcast data: ' + opId + ' size:' + buff.length + " data:" + buff);
+                log(self.headlog() +'broadcast data: ' + self.opId + ' size:' + buff.length + " data:" + buff);
             }
             if(syncAll && type==2 )
             {
