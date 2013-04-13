@@ -210,8 +210,14 @@ net.createServer(function(sock) {
 
                     data=JSON.parse(data.toString('utf8'));
 
-
-                    if(data.cmd=='Sync')
+                    if(data.cmd == 'Live')
+                    {
+                        client.send({
+                            'cmd' : data.rcmd ,
+                            'result' : 0
+                        });
+                    }
+                    else if(data.cmd=='Sync')
                     {
 
                         client.leaveChannel();

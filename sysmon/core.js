@@ -149,6 +149,9 @@ exports.start_server = function(port){
                    render_json(data, res);
                }, num);
             break;
+            case '/ip':
+                 render_json( { 'ip' :  req.socket.remoteAddress } ,res);
+                break;
             case '/clist' :
                  render_json(getChannelList(),res);
                  break;
