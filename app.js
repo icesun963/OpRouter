@@ -210,7 +210,7 @@ net.createServer(function(sock) {
 
                     data=JSON.parse(data.toString('utf8'));
 
-                    if(data.cmd == 'Live')
+                    if(data.cmd == 'Ping')
                     {
                         client.send({
                             'cmd' : data.rcmd ,
