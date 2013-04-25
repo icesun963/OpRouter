@@ -158,6 +158,10 @@ exports.start_server = function(port){
             case '/upuser' :
                 try
                 {
+                    if(!getNowUser()){
+                        render_file(path.join(__dirname, 'app', '404.html'), res, 404);
+                        break;
+                    }
                     //fs.readFile('/proc/loadavg', "r", function(err, data){ // Broken, currently.
                     var ps = exec('cat /proc/loadavg', function(err, data, stderr){
                         if (err)

@@ -88,6 +88,10 @@ setInterval(function(){
 var Router = new RouterChannel();
 
 getNowUser = function(){
+    if(!Router.isConned)
+    {
+        return undefined;
+    }
     return {
         'NowUser' : Router.count() ,
         'ChannelCount' : Channels.size(),

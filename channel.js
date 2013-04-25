@@ -63,6 +63,7 @@ Channel = function (id,syncAll)
                 tclient.channel.remove(tclient);
             }
             tclient.channel=this;
+            this.send( {  cmd :'OpRouter' , args:[ tclient.remoteAddress + ':' + tclient.remotePort] })
         }
 
     }

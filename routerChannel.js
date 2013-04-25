@@ -83,10 +83,13 @@ RouterChannel = function()
 
     var client= new Client(sock);
 
+    this.isConned = false;
+
     var connect=function(){
         sock.connect(port, host, function() {
             log('RouterChannel CONNECTED TO: ' + host + ':' + port);
             client= new Client(sock);
+            self.isConned=true;
         })
     };
 
@@ -96,8 +99,10 @@ RouterChannel = function()
 
     var inReconnent=0;
     reConnect=function(){
+
         if(inReconnent==0)
         {
+
             inReconnent++;
             setTimeout(
                 function(){
@@ -110,7 +115,7 @@ RouterChannel = function()
     sock.on('error', function (err) {
         log( 'error :' +  err  + 'On RouterChannel ');
         log('RouterChannel ReConnect...');
-
+        self.isConned=false;
         reConnect();
         self.close();
     });
