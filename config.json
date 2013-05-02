@@ -1,5 +1,5 @@
 {
-    "Version": "0.4.5",
+    "Version": "0.4.6",
     "ServerPort" : 8066,
 
     "ClientHost": "10.241.35.5",
@@ -10,6 +10,6 @@
     "AliveSecond": 300  ,
     "DataDumpOn" : false,
     "LogOn" : false,
-    "AutoExitOnNoClient" : true ,
+    "AutoExitOnNoClient" : false ,
     "MaxErrorCount" : 10
 }
