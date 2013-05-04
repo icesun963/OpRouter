@@ -21,8 +21,6 @@ RouterChannel = function()
             this.maxcount = this.list.length;
         }
         log( 'RouterChannel sock count:' + this.list.length  + ', maxcount:' + this.maxcount );
-
-
     }
 
     //查找是否已经加入
@@ -94,15 +92,12 @@ RouterChannel = function()
     };
 
 
-
     connect();
 
     var inReconnent=0;
     reConnect=function(){
-
         if(inReconnent==0)
         {
-
             inReconnent++;
             setTimeout(
                 function(){
@@ -115,9 +110,8 @@ RouterChannel = function()
     sock.on('error', function (err) {
         log( 'error :' +  err  + 'On RouterChannel ');
         log('RouterChannel ReConnect...');
-        self.isConned=false;
+        self.isConned = false;
         reConnect();
-        self.close();
     });
 
 

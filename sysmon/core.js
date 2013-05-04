@@ -156,52 +156,65 @@ exports.start_server = function(port){
                  render_json(getChannelList(),res);
                  break;
             case '/upuser' :
+                    try
+                    {
+                        if(!getNowUser()){
+                            render_file(path.join(__dirname, 'app', '404.html'), res, 404);
+                            break;
+                        }
+                        //fs.readFile('/proc/loadavg', "r", function(err, data){ // Broken, currently.
+                        var ps = exec('cat /proc/loadavg', function(err, data, stderr){
+                            if (err)
+                            {
+                                var nowUser =   getNowUser();
+                                render_json( {
+                                    "CpuAvg1": 0.50 ,
+                                    "CpuAvg2": 0.50 ,
+                                    "CpuAvg3": 0.50 ,
+                                    "NowUser":nowUser.NowUser,
+                                    "ChannelCount" : nowUser.ChannelCount,
+                                    "SyncChannelCount":nowUser.SyncChannelCount
+                                } ,res);
+                                return false;
+                            }
+                            data = (data + '').split(' ');
+                            var proc = data.slice(0, 3);
+                            var ad = data[4].split('/');
+                            var amt = {
+                                running: ad[0],
+                                total: ad[1]
+                            };
+                            var nowUser =   getNowUser();
+                            render_json( {
+                                "CpuAvg1":parseFloat( proc[0] ) ,
+                                "CpuAvg2":parseFloat(  proc[1] ) ,
+                                "CpuAvg3": parseFloat( proc[2] ),
+                                "NowUser":nowUser.NowUser,
+                                "ChannelCount" : nowUser.ChannelCount,
+                                "SyncChannelCount":nowUser.SyncChannelCount
+                            } ,res);
+                        });
+
+                    }
+                    catch(err)
+                    {
+
+                    }
+                break;
+            case '/ulist' :
                 try
                 {
                     if(!getNowUser()){
                         render_file(path.join(__dirname, 'app', '404.html'), res, 404);
                         break;
                     }
-                    //fs.readFile('/proc/loadavg', "r", function(err, data){ // Broken, currently.
-                    var ps = exec('cat /proc/loadavg', function(err, data, stderr){
-                        if (err)
-                        {
-                            var nowUser =   getNowUser();
-                            render_json( {
-                                "CpuAvg1": 0.50 ,
-                                "CpuAvg2": 0.50 ,
-                                "CpuAvg3": 0.50 ,
-                                "NowUser":nowUser.NowUser,
-                                "ChannelCount" : nowUser.ChannelCount,
-                                "SyncChannelCount":nowUser.SyncChannelCount
-                            } ,res);
-                            return false;
-                        }
-                        data = (data + '').split(' ');
-                        var proc = data.slice(0, 3);
-                        var ad = data[4].split('/');
-                        var amt = {
-                            running: ad[0],
-                            total: ad[1]
-                        };
-                        var nowUser =   getNowUser();
-                        render_json( {
-                            "CpuAvg1":parseFloat( proc[0] ) ,
-                            "CpuAvg2":parseFloat(  proc[1] ) ,
-                            "CpuAvg3": parseFloat( proc[2] ),
-                            "NowUser":nowUser.NowUser,
-                            "ChannelCount" : nowUser.ChannelCount,
-                            "SyncChannelCount":nowUser.SyncChannelCount
-                        } ,res);
-                    });
-
+                    render_json(getUserList(), res);
                 }
                 catch(err)
                 {
 
                 }
                 break;
-
             default:
                 if(requrl.pathname=='/')
                     requrl.pathname='/main.html';

@@ -87,6 +87,16 @@ setInterval(function(){
 //主通道
 var Router = new RouterChannel();
 
+getUserList = function(){
+   var ret= [];
+    for(var i=0;i<Router.list.length;i++)
+    {
+        var client= Router.list[i];
+        ret.push(client.remoteAddress + ":" + client.remotePort);
+    }
+    return ret;
+};
+
 getNowUser = function(){
     if(!Router.isConned)
     {
