@@ -3,7 +3,7 @@ require('./ShareLib.js');
 var zlib = require("zlib");
 var net = require('net');
 
-var HOST = '127.0.0.1';
+var HOST = '42.120.19.42';
 var PORT = 8066;
 var acc= "guest_" + Math.random();
 var client = new net.Socket();
