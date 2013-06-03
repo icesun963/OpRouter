@@ -146,8 +146,10 @@ Channel = function (id,syncAll)
                 client.leaveChannel();
         }
         if(!self.Closed)
+        {
             this.sock.destroy();
-
+            this.sock.close();
+        }
         if(self.onClose_CallBack)
             self.onClose_CallBack(self.opId);
     }

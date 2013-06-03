@@ -3,7 +3,7 @@ require('./ShareLib.js');
 var zlib = require("zlib");
 var net = require('net');
 
-var HOST = '42.120.19.42';
+var HOST = '121.199.15.58';
 var PORT = 8066;
 var acc= "guest_" + Math.random();
 var client = new net.Socket();
@@ -14,6 +14,8 @@ client.connect(PORT, HOST, function() {
     // 建立连接后立即向服务器发送数据，服务器将收到这些数据
 
     //使用同步频道 或者切换频道
+    //var cmd = "PingWarn"
+    //var cmd= { cmd :"PingWarn",rcmd : 1000, args:[1000] }
     var cmd= { cmd :"GetOpIdByToken",rcmd : 1000, args:[acc] }
     //var cmd = { cmd : "Sync"  , args:["98715"]}
     var buff= new ByteRequest();
