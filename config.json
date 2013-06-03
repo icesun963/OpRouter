@@ -1,10 +1,10 @@
 {
-    "Version": "0.4.9",
+    "Version": "0.5.0",
     "ServerPort" : 8066,
 
-    "ClientHost": "10.132.26.225",
+    "ClientHost": "121.199.15.58",
     "ClientPort": 8066,
-    "SyncHost" : "10.132.26.225",
+    "SyncHost" : "121.199.15.58",
     "SyncPort" : 8066,
 
     "AliveSecond": 300  ,

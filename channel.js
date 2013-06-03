@@ -142,13 +142,20 @@ Channel = function (id,syncAll)
         for(var i= 0;i<this.list.length;i++)
         {
             var client=this.list[i];
-            if(client)
-                client.leaveChannel();
+            if(self.Closed)
+            {
+                if(client)
+                    client.close();
+            }
+            else
+            {
+                if(client)
+                    client.leaveChannel();
+            }
         }
         if(!self.Closed)
         {
             this.sock.destroy();
-            this.sock.close();
         }
         if(self.onClose_CallBack)
             self.onClose_CallBack(self.opId);
