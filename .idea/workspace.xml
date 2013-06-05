@@ -4,12 +4,13 @@
     <list default="true" id="c5f39380-62b6-41f4-8ef1-54dbc5a69054" name="Default" comment="" />
     <ignored path="OpRouter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1370405115260" ignored="false" />
+    <file path="/Dummy.txt" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1370409185959" ignored="false" />
     <file path="/app.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1367660453768" ignored="false" />
     <file path="/channel.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1370241258230" ignored="false" />
     <file path="/core.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1367660323658" ignored="false" />
     <file path="/config.json" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1367480591477" ignored="false" />
     <file path="/client.js" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1370077056346" ignored="false" />
+    <file path="/a.dummy" changelist="c5f39380-62b6-41f4-8ef1-54dbc5a69054" time="1370409206231" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +33,7 @@
       <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="0.047381546">
+            <state line="10" column="33" selection-start="220" selection-end="220" vertical-scroll-proportion="0.41942605">
               <folding />
             </state>
           </provider>
@@ -59,7 +60,7 @@
       <file leaf-file-name="routerChannel.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routerChannel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="48" selection-start="2957" selection-end="2957" vertical-scroll-proportion="0.0">
+            <state line="56" column="22" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,9 +113,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="140" />
-    <option name="y" value="8" />
-    <option name="width" value="1456" />
+    <option name="x" value="1432" />
+    <option name="y" value="-8" />
+    <option name="width" value="1381" />
     <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -310,13 +311,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="140" y="8" width="1456" height="916" extended-state="0" />
+    <frame x="1432" y="-8" width="1381" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26887792" sideWeight="0.60237783" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26825634" sideWeight="0.67107004" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3976222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -325,7 +327,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -465,13 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routerChannel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="48" selection-start="2957" selection-end="2957" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fun.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="153" column="0" selection-start="3642" selection-end="3642" vertical-scroll-proportion="0.0">
@@ -486,9 +480,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routerChannel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="22" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="0.047381546">
+        <state line="10" column="33" selection-start="220" selection-end="220" vertical-scroll-proportion="0.41942605">
           <folding />
         </state>
       </provider>
