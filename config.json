@@ -1,11 +1,11 @@
 {
-    "Version": "0.5.0",
+    "Version": "0.5.1",
     "ServerPort" : 8066,
 
-    "ClientHost": "121.199.15.58",
+    "ClientHost": "10.132.26.225",
     "ClientPort": 8066,
-    "SyncHost" : "121.199.15.58",
-    "SyncPort" : 8066,
+    "SyncHost" : "10.132.26.225",
+    "SyncPort" : 8077,
 
     "AliveSecond": 300  ,
     "DataDumpOn" : false,

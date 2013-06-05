@@ -203,6 +203,7 @@ Channel = function (id,syncAll)
 
     this.sock.on('error', function (err) {
         log(self.headlog() + ' channel OnError:' + err  + ' opId:' + self.opId);
+        self.Closed=true;
         self.close();
     });
 
