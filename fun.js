@@ -12,6 +12,7 @@ Buffer.prototype.toByteArray = function () {
 }
 
 
+
 //===================================================================
 //输出日志
 //===================================================================
@@ -69,6 +70,7 @@ Client = function(sock)
     this.channel;
     this.syncchannel;
     this.error = 0;
+    this.buildTime = new Date();
     var self = this;
 
     this.onLeaverChannel=function(callback){

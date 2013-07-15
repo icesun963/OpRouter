@@ -23,6 +23,8 @@ RouterChannel = function()
         log( 'RouterChannel sock count:' + this.list.length  + ', maxcount:' + this.maxcount );
     }
 
+
+
     //查找是否已经加入
     //成功返回0-下标
     //失败返回-1
@@ -82,6 +84,18 @@ RouterChannel = function()
     var client= new Client(sock);
 
     this.isConned = false;
+
+    //定时发送Live心跳
+    setInterval(function(){
+        if(self.isConned)
+        {
+            self.send({
+                'cmd' : 'Live'
+            });
+        }
+
+    },30 * 1000);
+
 
     var connect=function(){
         sock.connect(port, host, function() {

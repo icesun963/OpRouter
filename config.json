@@ -1,15 +1,15 @@
 {
-    "Version": "0.5.1",
-    "ServerPort" : 8066,
+    "Version": "0.5.2",
+    "ServerPort" : 8088,
 
-    "ClientHost": "10.132.26.225",
+    "ClientHost": "192.168.2.179",
     "ClientPort": 8066,
-    "SyncHost" : "10.132.26.225",
+    "SyncHost" : "192.168.2.179",
     "SyncPort" : 8066,
 
     "AliveSecond": 300  ,
     "DataDumpOn" : false,
     "LogOn" : false,
-    "AutoExitOnNoClient" : false ,
+    "AutoExitOnNoClient" : true ,
     "MaxErrorCount" : 10
 }

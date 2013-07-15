@@ -84,6 +84,21 @@ setInterval(function(){
 },5 * 60 * 1000);
 
 
+setInterval(function(){
+    for(var i=0;i<Router.list.length;i++)
+    {
+        var client= Router.list[i];
+        var now =new Date().getTime();
+        if(!client.channel)
+        {
+              if((now - client.buildTime.getTime())>10*1000)
+              {
+                  client.close();
+              }
+        }
+    }
+},5 * 1000);
+
 //主通道
 var Router = new RouterChannel();
 
@@ -288,9 +303,11 @@ net.createServer(function(sock) {
                         }
 
                         channel.add(client);
+
                         if(syncchannel)
                         {
                             syncchannel.add(client);
+                            //client.syncd = false;
                             syncchannel.send( { cmd : 'SyncAll' , args : [opid] });
                         }
 
