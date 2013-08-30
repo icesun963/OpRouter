@@ -186,40 +186,48 @@ ByteRequest = function()
             }
             if(this.buffer.length>=lenght + mylenght)
             {
-                if(datatype != 0 && datatype!=1 && datatype!=2 && datatype!=10 && datatype!=11)
+
+                try
+                {
+                    if(datatype != 0 && datatype!=1 && datatype!=2 && datatype!=10 && datatype!=11)
+                    {
+                        this.buffer = new Buffer(0);
+                        log('drop error type>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+                    }
+                    var data = this.buffer.slice(mylenght, lenght + mylenght);
+
+                    /*
+                    if(datatype == 1)
+                    {
+                        if(config.LogOn)
+                            log("fun zlib...");
+
+                        zlib.inflateRaw(data, function(err, buffer) {
+                            if (!err) {
+                                if(callback){
+                                    callback(buffer, datatype-1 );
+                                }
+                            }
+                        });
+                    }
+                    */
+                    //else
+                    {
+                        if(config.LogOn)
+                            log(">>callback:" + data);
+
+                        if(callback){
+                            callback(data,datatype);
+                        }
+                    }
+
+                    this.buffer= this.buffer.slice(lenght + inStream.offset());
+                }
+                catch(err)
                 {
                     this.buffer = new Buffer(0);
-                    log('drop error type>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
+                    log('parse error:' + err);
                 }
-
-                var data = this.buffer.slice(mylenght, lenght + mylenght);
-
-                /*
-                if(datatype == 1)
-                {
-                    if(config.LogOn)
-                        log("fun zlib...");
-
-                    zlib.inflateRaw(data, function(err, buffer) {
-                        if (!err) {
-                            if(callback){
-                                callback(buffer, datatype-1 );
-                            }
-                        }
-                    });
-                }
-                */
-                //else
-                {
-                    if(config.LogOn)
-                        log(">>callback:" + data);
-
-                    if(callback){
-                        callback(data,datatype);
-                    }
-                }
-
-                this.buffer= this.buffer.slice(lenght + inStream.offset());
             }
             else
             {

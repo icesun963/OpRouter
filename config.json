@@ -2,9 +2,9 @@
     "Version": "0.5.2",
     "ServerPort" : 8088,
 
-    "ClientHost": "192.168.2.179",
+    "ClientHost": "192.168.2.200",
     "ClientPort": 8066,
-    "SyncHost" : "192.168.2.179",
+    "SyncHost" : "192.168.2.200",
     "SyncPort" : 8066,
 
     "AliveSecond": 300  ,

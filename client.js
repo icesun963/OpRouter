@@ -3,8 +3,11 @@ require('./ShareLib.js');
 var zlib = require("zlib");
 var net = require('net');
 
-var HOST = '127.0.0.1';
-var PORT = 8077;
+var HOST = '115.239.196.36';
+    //HOST = '122.226.199.77';
+    HOST = '101.69.177.81';
+    //HOST = '101.69.177.60';
+var PORT = 8066;
 var acc= "guest_" + Math.random();
 var client = new net.Socket();
 
@@ -15,15 +18,19 @@ client.connect(PORT, HOST, function() {
 
     //使用同步频道 或者切换频道
     //var cmd = "PingWarn"
-    //var cmd= { cmd :"PingWarn",rcmd : 1000, args:[1000] }
-    var cmd= { cmd :"GetOpIdByToken",rcmd : 1000, args:[acc] }
-    //var cmd = { cmd : "Sync"  , args:["98715"]}
+    var cmd= { cmd :"Live" , rcmd : 1000 , args:[ 1000 ] } ;
+    //var cmd= { cmd :"GetOpIdByToken",rcmd : 1000, args:[acc] }
+    //var cmd = { cmd : "Sync"  , args:["62c91f99-7377-499f-9596-14a7b5d6b6ec"]}
     var buff= new ByteRequest();
 
     buff.writeData(cmd);
 
     client.write(buff.buffer);
+    //var buffx= new Buffer("#DOTEST");
+    //client.write(buffx);
     log('Send Data: ' + buff.buffer);
+    //log('Send Data: ' + buff.buffer.toString('hex'));
+
 });
 
 var readbuff = new ByteRequest();
@@ -48,7 +55,7 @@ client.on('data', function(data) {
         }
         else if(type==2)
         {
-
+            log("head...");
         }
         else
         {
@@ -64,6 +71,7 @@ logic = function(data){
     log('CallBack Data: ' + data + " Size:" + data.length);
     try
     {
+        return;
         data = JSON.parse(data);
         var outbuff= new ByteRequest();
         if(data.cmd)
